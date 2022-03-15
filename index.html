@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Save Ukraine</title>
+	<title>Врятувати Україну</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -12,19 +12,20 @@
 <body>
 	<div class="wrapper">
 		<div class="donate">
-			<a href="" class="donate__link">Donate/Помочь</a>
+			<a href="" class="donate__link-fixed">Donate Допомогти</a>
 		</div>
 		<header class="header">
 			<div class="header__container container">
 				<div class="header__body">
 					<div class="header__logo logo">
-						<a href="#" class="logo__link">Save Ukraine</a>
+						<div class="logo__text">Міждународний Благодійний Фонд</div>
+						<a href="#" class="logo__link">Врятувати <span>Україну</span></a>
 					</div>
 					<div class="header__row" id="header-menu">
 						<div class="header__menu menu">
 							<ul class="menu__list" >
 								<li class="menu__item">
-									<a href="#" class="menu__link">О нас</a>
+									<a href="#" class="menu__link">Про Фонд</a>
 									<span class="arrow"></span>
 									<ul class="menu__sub-list">
 										<li class="menu__sub-item"><a href="#" class="menu__sub-link">0000000</a></li>
@@ -35,64 +36,66 @@
 									</ul>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Наша работа</a>
+									<a href="#" class="menu__link">Як я можу допомогти</a>
 									<span class="arrow"></span>
 									<ul class="menu__sub-list">
-										<li><a href="#" class="menu__sub-link">sdssdsd</a></li>
-										<li><a href="#" class="menu__sub-link">fghfghfghfg</a></li>
+										<li><a href="#" class="menu__sub-link">Стати волонтером</a></li>
+										<li><a href="#" class="menu__sub-link">Пожертвувати кошти</a></li>
 									</ul>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Как помочь</a>
+									<a href="#" class="menu__link">Звіти</a>
 									<span class="arrow"></span>
 									<ul class="menu__sub-list">
 										<li><a href="#" class="menu__sub-link">0000sds</a></li>
 										<li><a href="#" class="menu__sub-link">2220jklk;!!</a></li>
 									</ul>
 								</li>
-								<li class="menu__item"><a href="#" class="menu__link">Пакеты</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">Работы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Реквізити</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
 							</ul>
 						</div>
-						<div class="header__login login">
-							<a href="#" class="login__link">Войти</a>
+						<div class="header__donate donate-header">
+							<a href="#" class="donate-header__link _btn">Допомогти</a>
 						</div>
 					</div>
+					<button type="button" id="burger-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
 				</div>
-				<button type="button" id="burger-menu">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
 			</div>
 		</header>
 		<main class="main">
 			<div class="main__container container">
 				<section class="main__slider slider-main">
-					<div class="swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<img src="image/slider-image_01.jpeg" alt="Харьков">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slider-image_02.jpeg" alt="Харьков">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slider-image_03.jpeg" alt="Харьков">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slider-image_04.jpeg" alt="Харьков">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slider-image_05.jpeg" alt="Харьков">
-							</div>
-							<div class="swiper-slide">
-								<img src="image/slider-image_06.jpeg" alt="Харьков">
-							</div>
+					<div class="slider-main__body">
+						<div class="slider-main__content slider-content">
+							<p class="slider-main__parag">Міждународний Благодійний Фонд</p>
+							<h1 class="slider-main__title">Врятувати <span>Україну</span></h1>
+							<div class="slider-main__text">Ми - не прибуткова організація. Наша мета допомогти <span>уникнути гуманітарної катострофи в Україні</span>, викликаної військовою агресією Російської Федерації.</div>
+							<a href="#" class="slider-main__button _btn">Допомогти Україні</a>
 						</div>
-						<div class="swiper-pagination"></div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="image/ukraine-slider_1.png" alt="Харьков">
+								</div>
+								<div class="swiper-slide">
+									<img src="image/ukraine-slider_2.png" alt="Харьков">
+								</div>
+								<div class="swiper-slide">
+									<img src="image/ukraine-slider_3.png" alt="Харьков">
+								</div>
+								<div class="swiper-slide">
+									<img src="image/ukraine-slider_4.png" alt="Харьков">
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
 					</div>
 				</section>
 				<section class="main__about-us about-us">

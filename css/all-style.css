@@ -27,7 +27,8 @@ body{
 	top: 250px;
 	z-index: 50;
 }
-.donate__link{
+.donate__link-fixed{
+	width: 110px;
 	font-size: 16px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -37,15 +38,16 @@ body{
 	display: block;
 	border: 1px solid transparent;
 	box-shadow: -2px -2px 5px #D3D3D3;
-	background: linear-gradient(to bottom, #6495ED 50%, #FFFF00 50%);
+	background: linear-gradient(to bottom, #0786A5 50%, #FFD500 50%);
 }
-.donate:hover .donate__link{
+.donate:hover .donate__link-fixed{
 	border: 1px solid #8B0000;
 }
 button{
 	background: transparent;
 	border: none;
 }
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -55,6 +57,21 @@ button{
 	.container {
 		padding: 0 8px;
 	}
+}
+._btn {
+	display: inline-block;
+	font-size: 20px;
+	padding: 6px 20px 10px;
+	border-radius: 20px;
+	color: #fff;
+	background: #0786A5;
+	transition: all .6s ease;
+	font-weight: 700;
+}
+._btn:hover {
+	color: #2F4F4F;
+	background: #FFD500;
+	transition: all .6s ease;
 }
 .title{
 	font-size: 44px;
