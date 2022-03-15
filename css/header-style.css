@@ -79,7 +79,7 @@
 	align-items: center;
 	position: relative;
 	z-index: 10;
-	background: #1BBAE1;
+	background: #F5F5F5;
 	padding: 8px 20px;
 }
 .menu__list {
@@ -98,12 +98,11 @@
 .menu__link {
 	font-size: 16px;
 	padding: 4px;
-	text-transform: uppercase;
-	color: #fff;
+	color: #0786A5;
 	transition: all .6s ease;
 }
 .menu__list li:hover .menu__link {
-	color: #2F4F4F;
+	color: #FFD500;
 	transition: all .6s ease;
 }
 
@@ -194,7 +193,7 @@
 }
 .menu__sub-link:hover{
 	text-decoration: underline;
-	color: #2F4F4F;
+	color: #144652;
 	transition: all .6s ease;
 }
 
@@ -241,7 +240,7 @@
 	transition: all .6s ease;
 }*/
 /*.donate-header:hover .donate-header__link {
-	color: #2F4F4F;
+	color: #144652;
 	background: #FFD500;
 	transition: all .6s ease;
 }*/

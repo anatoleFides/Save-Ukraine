@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?c4lgea');
-  src:  url('fonts/icomoon.eot?c4lgea#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?c4lgea') format('truetype'),
-    url('fonts/icomoon.woff?c4lgea') format('woff'),
-    url('fonts/icomoon.svg?c4lgea#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?ngviog');
+  src:  url('fonts/icomoon.eot?ngviog#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ngviog') format('truetype'),
+    url('fonts/icomoon.woff?ngviog') format('woff'),
+    url('fonts/icomoon.svg?ngviog#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,8 +12,8 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
+  font-family: 'icomoon';
+/*  speak: never;*/
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -54,4 +54,13 @@
 }
 .icon-location2:before {
   content: "\e948";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-left:before {
+  content: "\ea44";
 }
