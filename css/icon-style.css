@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ngviog');
-  src:  url('fonts/icomoon.eot?ngviog#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ngviog') format('truetype'),
-    url('fonts/icomoon.woff?ngviog') format('woff'),
-    url('fonts/icomoon.svg?ngviog#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?aptnet');
+  src:  url('../fonts/icomoon.eot?aptnet#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?aptnet') format('truetype'),
+    url('../fonts/icomoon.woff?aptnet') format('woff'),
+    url('../fonts/icomoon.svg?aptnet#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon';
+  font-family: 'icomoon' !important;
 /*  speak: never;*/
   font-style: normal;
   font-weight: normal;
