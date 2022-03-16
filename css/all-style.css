@@ -56,4 +56,11 @@ button{
 	font-weight: 700;
 	padding: 40px 0;
 }
-
+@media (max-width: 768px) {
+	.title{
+		font-size: 42px;
+		line-height: 44px;
+		font-weight: 700;
+		padding: 25px 0 25px;
+	}
+}
