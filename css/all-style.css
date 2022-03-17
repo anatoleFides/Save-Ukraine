@@ -35,10 +35,42 @@ button{
 		padding: 0 8px;
 	}
 }
+.contacts__item {
+	position: relative;
+	margin: 0 0 16px 0;
+	font-size: 18px;
+	transition: all .6s ease;
+}
+.contacts__item:hover {
+	color: #FFF500;
+	transition: all .6s ease;
+}
+.contacts__item:before {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+}
+.contacts__item a {
+	font-size: 14px;
+	font-weight: 700;
+	color: #0786A5;
+	font-family: 'Open Sans', sans-serif;
+	padding: 4px 0 4px 24px ;
+	display: block;
+	position: relative;
+	z-index: 10;
+	transition: all .6s ease;
+}
+.contacts__item a:hover {
+	color: #144652;
+	transition: all .6s ease;
+}
 ._btn {
 	display: inline-block;
-	font-size: 20px;
-	padding: 6px 20px 10px;
+	font-size: 16px;
+	padding: 8px 20px;
 	border-radius: 20px;
 	color: #fff;
 	background: #1BBAE1;

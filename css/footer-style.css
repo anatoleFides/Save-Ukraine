@@ -12,7 +12,7 @@
 	padding: 16px 0;
 	font-size: 24px;
 	font-weight: 700;
-	color: #FFFF00;
+	color: #FFF500;
 }
 .footer__row {
 	display: flex;
@@ -30,84 +30,66 @@
 	height: 1px;
 	background: #FFF500;
 }
+@media (max-width: 768px) {
+	.footer__logo {
+		display: none;
+	}
+	.footer__row {
+		flex-direction: column;
+	}
+}
 .footer__body {
 	display: flex;
 	justify-content: space-between;
 	margin: 30px -16px 50px;
 	color: #0786A5;
 }
+@media (max-width: 768px) {
+	.footer__body {
+		flex-direction: column;
+	}
+}
 .footer__body h3 {
 	font-size: 20px;
 	font-weight: 700;
 	padding: 0 0 32px 0;
-	/*text-align: center;*/
 	color: #144652;
+	margin: 0 0 0 30px;
 }
-.footer__body a {
-	font-size: 16px;
-	font-weight: 700;
-	color: #0786A5;
-	font-family: 'Open Sans', sans-serif;
-	padding: 4px 0 4px 24px ;
-	display: block;
-	position: relative;
-	z-index: 10;
-	transition: all .6s ease;
-}
-.footer__body a:hover {
-	color: #144652;
-	transition: all .6s ease;
+.footer__body h3:last-child {
+	margin: 0;
 }
 .footer__item {
 	flex: 0 0 33.33%;
 	padding: 0 16px;
 }
 .contacts__items {
-	margin: 0 50px;
+	margin: 0 30px;
 }
-.contacts__item {
-	position: relative;
-	margin: 0 0 16px 0;
-	font-size: 18px;
+.contacts__items .contacts__item:first-child {
+	font-family: 'Open Sans', sans-serif;
+	padding: 4px 0 4px 24px ;
 	transition: all .6s ease;
+	font-weight: 700;
+	font-size: 14px;
 }
-.contacts__item:hover {
-	color: #FFF500;
+.contacts__items .contacts__item:first-child:before{
+	font-family: 'icomoon';
+}
+.contacts__items .contacts__iteme:hover:first-child {
+	color: #144652;
 	transition: all .6s ease;
-}
-.contacts__item:before {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 5;
 }
 .messengers__items {
-	margin: 0 50px;
+	margin: 0 30px;
 }
 .messengers__item {
-	position: relative;
-
-	margin: 0 0 16px 0;
-	font-size: 20px;
-	transition: all .6s ease;
+	font-size: 18px;
 }
-.messengers__item:hover {
-	color: #FFF500;
-	transition: all .6s ease;
-}
-.messengers__item:before {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 5;
-}
-.footer__social {}
 .social-media__items {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	margin: 0 0 0 30px;
 }
 .social-media__item {
 	font-size: 44px;
@@ -120,4 +102,11 @@
 }
 .social-media__item:last-child {
 	margin: 0;
+}
+.footer__copyright {
+	font-size: 16px;
+	line-height: 22px;
+	color: #0786A5;
+	text-align: right;
+	padding: 0 0 35px 0;
 }
