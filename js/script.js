@@ -5,6 +5,22 @@ document.getElementById("burger-menu").onclick = (event) => {
   document.getElementsByTagName('body')[0].classList.toggle('hidden')
 }
 
+window.onscroll = function() {
+  checkMarginToTop();
+}
+
+const nav = document.getElementById("menu-stiky");
+
+let sticky = nav.offsetTop;
+
+function checkMarginToTop() {
+  if (window.pageYOffset > sticky) {
+    nav.classList.add("menu-sticky");
+  } else {
+    nav.classList.remove("menu-sticky");
+  }
+}
+
 if (document.querySelector('.slider-main-ukrain')){
   const swiperUkrain = new Swiper('.slider-main-ukrain', {
     observer: true,

@@ -1,6 +1,7 @@
 .main {
 	flex: 1 1 auto;
 	margin: 140px 0 0 0;
+	position: relative;
 }
 @media (max-width: 768px) {
 	.main {
@@ -41,18 +42,19 @@
 }
 .slider-main__parag {
 	margin: 16px 0 0 0;
+	line-height: 19px;
 }
 .slider-main__title {
 	font-size: 56px;
 	font-weight: 700;
 	line-height: 76px;
-	padding: 28px 0 40px;
+	padding: 18px 0 30px;
 }
 .slider-main__title span {
 	color: #FFD500;
 }
 .slider-main__text {
-	margin: 0 0 24px 0;
+	margin: 0 0 30px 0;
 	line-height: 22px;
 	text-indent: 1em;
 }
