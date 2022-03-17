@@ -7,8 +7,8 @@ html{
 }
 body{
 	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
 	height: 100%;
+	scroll-behavior: smooth;
 }
 /* @media (max-width: 768px){
 	body{
@@ -34,6 +34,20 @@ button{
 @media (max-width: 800px) {
 	.container {
 		padding: 0 8px;
+	}
+}
+.title{
+	font-size: 56px;
+	line-height: 76px;
+	font-weight: 700;
+	padding: 40px 0;
+}
+@media (max-width: 768px) {
+	.title{
+		font-size: 42px;
+		line-height: 44px;
+		font-weight: 700;
+		padding: 25px 0 25px;
 	}
 }
 .contacts__item {
@@ -83,17 +97,4 @@ button{
 	background: #FFD500;
 	transition: all .6s ease;
 }
-.title{
-	font-size: 56px;
-	line-height: 76px;
-	font-weight: 700;
-	padding: 40px 0;
-}
-@media (max-width: 768px) {
-	.title{
-		font-size: 42px;
-		line-height: 44px;
-		font-weight: 700;
-		padding: 25px 0 25px;
-	}
-}
+

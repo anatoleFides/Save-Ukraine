@@ -1,10 +1,12 @@
 //Burger
 document.getElementById("burger-menu").onclick = (event) => {
   document.getElementById("burger-menu").classList.toggle('open')
-  document.getElementById("header-menu").classList.toggle('active')
+  document.getElementById("main-menu").classList.toggle('active')
+  document.getElementsByTagName('header')[0].classList.toggle('transperent')
   document.getElementsByTagName('body')[0].classList.toggle('hidden')
 }
 
+//Scroll+fixed menu
 window.onscroll = function() {
   checkMarginToTop();
 }
@@ -20,13 +22,14 @@ function checkMarginToTop() {
     nav.classList.remove("menu-sticky");
   }
 }
-
+//Sliders
 if (document.querySelector('.slider-main-ukrain')){
   const swiperUkrain = new Swiper('.slider-main-ukrain', {
     observer: true,
     observerParents: true,
     slidesPerView: 1,
     spaceBetween: 32,
+    effect: "fade",
     watchOverflow: true,
     speed: 1200,
     loop: true,
