@@ -14,10 +14,27 @@
 		<header class="header">
 			<div class="header__container container">
 				<div class="header__body">
-					<div class="header__logo logo">
-						<div class="logo__text">Міждународний Благодійний Фонд</div>
-						<a href="#" class="logo__link">Врятувати <span>Україну</span></a>
+					<div class="header__content content-header">
+						<div class="content-header__tel contacts__tel icon-phone">
+							<a href="#">+380509248524</a>
+						</div>
+						<div class="content-header__logo logo">
+							<div class="logo__text">Міждународний Благодійний Фонд</div>
+							<a href="#" class="logo__link">Врятувати <span>Україну</span></a>
+						</div>
+						<div class="content-header__email contacts__email icon-envelop">
+							<a href="#">CharityUA2022@gmail.com</a>
+						</div>
 					</div>
+					<button type="button" id="burger-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+			<div class="heade__line-menu">
+				<div class="header__container container">
 					<div class="header__row" id="header-menu">
 						<div class="header__menu menu">
 							<ul class="menu__list" >
@@ -52,15 +69,10 @@
 								<li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
 							</ul>
 						</div>
-						<div class="header__donate donate-header">
-							<a href="#" class="donate-header__link _btn">Допомогти</a>
+						<div class="header__donate donate">
+							<a href="#" class="donate__link _btn">Допомогти</a>
 						</div>
 					</div>
-					<button type="button" id="burger-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
 				</div>
 			</div>
 		</header>
@@ -91,8 +103,6 @@
 							</div>
 							<div class="swiper-pagination slider-dots-ukrain"></div>
 							<div class="slider-arrows">
-<!-- 								<div class="slider-arrows-prev icon-circle-left"></div>
-								<div class="slider-arrows-nex icon-circle-right"></div> -->
 								<div class="swiper-button-prev slider-arrows-prev"></div>
 								<div class="swiper-button-next slider-arrows-next"></div>
 							</div>
@@ -143,11 +153,15 @@
 							</div>
 						</div>
 						<div class="about-us__images">
-							<div class="about-us__image">
-								<img src="image/about-us/about-us__img1.png" alt="Волонтери">
+							<div class="about-us__images_bound">
+								<div class="about-us__image">
+									<img src="image/about-us/about-us__img1.png" alt="Волонтери">
+								</div>
 							</div>
-							<div class="about-us__image">
-								<img src="image/about-us/about-us__img2.png" alt="Волонтери">
+							<div class="about-us__images_bound">
+								<div class="about-us__image">
+									<img src="image/about-us/about-us__img2.png" alt="Волонтери">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -203,10 +217,10 @@
 				</div>
 			</section>
 			<section class="main__reports reports">
-				<div class="main__container containreports__anchor anchorer">
+				<div class="main__container container">
 					<div class="reports__row">
 						<h2 class="reports__title title">Звіти</h2>
-						<div class="">
+						<div class="reports__anchor anchor">
 							<a href="#" class="anchor__link icon-arrow-right2">Подивитись всі звіти</a>
 						</div>
 					</div>
@@ -251,7 +265,51 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container container">
-				<p>Save Ukraine</p>
+				<div class="footer__row">
+					<div class="footer__donate donate">
+						<a href="#" class="donate__link _btn">Допомогти</a>
+					</div>
+					<div class="content-header__logo logo">
+						<div class="logo__text">Міждународний Благодійний Фонд</div>
+						<a href="#" class="logo__link">Врятувати <span>Україну</span></a>
+					</div>
+				</div>
+				<div class="footer__body">
+					<div class="footer__item contacts">
+						<h3 class="contacts__title">Контакти</h3>
+						<div class="contacts__items">
+							<div class="contacts__item icon-location2">м.Харків</div>
+							<div class="contacts__item icon-phone">
+								<a href="#">+380509248524</a>
+							</div>
+							<div class="contacts__item icon-envelop">
+								<a href="#">CharityUA2022@gmail.com</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__item messengers">
+						<h3 class="messengers__title">Месенджери</h3>
+						<div class="messengers__items">
+							<div class="messengers__item icon-viber">
+								<a href="#">+380509248524</a>
+							</div>
+							<div class="messengers__item icon-telegram">
+								<a href="#">+380509248524</a>
+							</div>
+							<div class="messengers__item icon-whatsapp">
+								<a href="#">+380509248524</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__item social-media">
+						<h3 class="social-media__title">Подписывайтесь на нас</h3>
+						<div class="social-media__items">
+							<div class="social-media__item icon-instagram"><a href="#"></a></div>
+							<div class="social-media__item icon-facebook"><a href="#"></a></div>
+							<div class="social-media__item icon-twitter"><a href="#"></a></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>

@@ -283,13 +283,23 @@ span.swiper-pagination-bullet-active {
 	justify-content: space-between;
 	margin: 0 -25px 95px;
 }
-.about-us__image {
+.about-us__images_bound {
 	flex: 0 1 50%;
 	padding: 0 25px;
 }
-.about-us__image img {
-	max-width: 100%;
-	object-fit: cover;
+@media (min-width: 768px) {
+	.about-us__image {
+		position: relative;
+		padding: 0 0 55% 0;
+	}
+	.about-us__image img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 @media (max-width: 768px) {
 	.about-us__images {
@@ -297,10 +307,14 @@ span.swiper-pagination-bullet-active {
 		align-items: center;
 		margin: 0;
 	}
-	.about-us__image {
+	.about-us__images_bound{
 		flex: 1 1 auto;
 		padding: 0;
 		margin: 0 0 20px 0;
+	}
+	.about-us__image img {
+		max-width: 100%;
+		object-fit: cover;
 	}
 }
 /*ODA-----------------------------------------------------------------*/

@@ -5,20 +5,5 @@
 @import url('header-style.css');
 @import url('main-style.css');
 @import url('reports-style.css');
+@import url('footer-style.css');
 
-
-.footer {
-	flex: 0 0 60px;
-	background: #6495ED;
-}
-.footer__container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.footer__container p {
-	padding: 16px 0;
-	font-size: 24px;
-	font-weight: 700;
-	color: #FFFF00;
-}

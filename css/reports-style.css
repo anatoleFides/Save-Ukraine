@@ -57,10 +57,10 @@
 	}
 }
 .icon-arrow-right2 {
-	font-family: 'Open Sans', sans-serif;
+	
 }
 .reports__body {
-	display: flex;
+	display: flex;font-family: 'Open Sans', sans-serif;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 -15px;
