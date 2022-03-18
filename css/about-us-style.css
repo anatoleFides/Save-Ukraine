@@ -92,6 +92,9 @@
 		top: 100%;
 	}
 }
+/*.content-item__img img:nth-child(2) {
+	background: #FFF500;
+}*/
 .content-item__text {
 	min-width: 250px;
 	font-weight: 600;

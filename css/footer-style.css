@@ -66,6 +66,9 @@
 .contacts__items {
 	margin: 0 30px;
 }
+.contacts__items a{
+	font-weight: 700;
+}
 .contacts__items .contacts__item:first-child {
 	font-family: 'Open Sans', sans-serif;
 	padding: 4px 0 4px 24px ;
@@ -82,6 +85,9 @@
 }
 .messengers__items {
 	margin: 0 30px;
+}
+.messengers__items a{
+	font-weight: 700;
 }
 .messengers__item {
 	font-size: 18px;

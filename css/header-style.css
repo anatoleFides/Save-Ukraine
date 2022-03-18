@@ -27,7 +27,6 @@
 .header__body {
 	display: flex;
 	align-items: center;
-	font-weight: 700;
 	display: flex;
 }
 @media (max-width: 768px) {
