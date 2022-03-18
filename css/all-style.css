@@ -10,11 +10,11 @@ body{
 	height: 100%;
 	scroll-behavior: smooth;
 }
-/* @media (max-width: 768px){
-	body{
+@media (max-width: 768px){
+	body.hidden{
 		overflow: hidden;
 	}
-} */
+} 
 .wrapper{
 	min-height: 100%;
 	display: flex;
@@ -57,7 +57,7 @@ button{
 	transition: all .6s ease;
 }
 .contacts__item:hover {
-	color: #FFF500;
+	color: #FFD500;
 	transition: all .6s ease;
 }
 .contacts__item:before {

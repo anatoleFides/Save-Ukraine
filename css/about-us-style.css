@@ -1,10 +1,10 @@
 /*ABOUT US-------------------------------------------------------------*/
 .about-us__title{
-	color: #FFF500;
+	color: #FFD500;
 }
 .about-us__text {
 	position: relative;
-	background: #FFF500;
+	background: #FFD500;
 	padding: 65px 145px 40px;
 }
 @media (max-width: 768px) {
@@ -34,7 +34,6 @@
 	line-height: 25px;
 	margin: 0 0 20px 0;
 	text-align: justify;
-	text-indent: 1em;
 }
 @media (max-width: 768px) {
 	.about-us__parag {
@@ -98,9 +97,10 @@
 	font-size: 18px;
 	line-height: 25px;
 	color: #144652;
-	padding: 45px 75px;
+	padding: 45px 20%;
 	margin: 0 auto;
-	text-indent: 1em;
+	/*text-indent: 1em;*/
+	text-align: left;
 }
 @media (max-width: 992px) {
 	.about-us__content-item {
