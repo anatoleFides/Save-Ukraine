@@ -6,6 +6,7 @@
 	align-items: center;
 	font-size: 16px;
 	line-height: 22px;
+	padding: 30px 0;
 }
 .main-link__anchor {
 	font-weight: 700;
@@ -15,6 +16,7 @@
 .main-link__submenu {}
 .how-help__title {
 	color: #0786A5;
+	padding: 0 0 77px 0;
 }
 .title {}
 .how-help__body {
