@@ -129,22 +129,42 @@
 	transform: translateY(-50%);
 	width: 28px;
 	height: 20px;
-	background: url(../image/danation-money.svg);
+	background: url(../image/donation-money.svg);
 	z-index: 3;
 }
 .form-donation__input {
 	max-width: 270px;
-	border: 1px solid #1BBAE1;
+	background: #EAEAEA;
+	border: 1px solid #EAEAEA;
 	border-radius: 20px;
 	padding: 10px 0 10px 48px;
 	font-size: 18px;
 	line-height: 25px;
+	color:#1BBAE1;
+}
+input[type="text"] {
 	color: #1BBAE1;
 }
+input[type="search"]::-webkit-input-placeholder {
+    color: #C4C4C4;
+   } 
+   input[type="search"]::-moz-placeholder {
+    color: #C4C4C4;
+   }
 .form-donation__input:focus-visible {
-	border: 1px solid #FFD500;
+	background: #fff;
+	border: 1px solid #1BBAE1;
 }
-/*.form-donation__input:focus-visible .form-donation__input {
-	color: #FFD500;*/
+.form-donation__input:focus .form-donation__item_text:before{
+	background: url(../image/donation-money-active.svg);
 }
-.tabs-donation__link {}
+.tabs-donation__link {
+	background: #C4C4C4;
+	color: #fff;
+	transition: all .6s ease;
+}
+.tabs-donation__link:hover {
+	background: #1BBAE1;
+	color: #fff;
+	transition: all .6s ease;
+}
