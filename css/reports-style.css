@@ -72,9 +72,6 @@
 		height: 28px;
 	}
 }
-.icon-arrow-right2 {
-	
-}
 .reports__body {
 	display: flex;font-family: 'Open Sans', sans-serif;
 	justify-content: space-between;
@@ -107,15 +104,6 @@
 .item-reports__image {
 	position: relative;
 	padding: 0 0 50% 0;
-}
-.item-reports__image img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	display: block;
 }
 .item-reports__content {
 	background: #F5F5F5;

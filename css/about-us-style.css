@@ -133,22 +133,13 @@
 }
 .about-us__images_bound {
 	flex: 0 1 50%;
+	width: 100%;
 	padding: 0 25px;
 }
-@media (min-width: 768px) {
 	.about-us__image {
 		position: relative;
 		padding: 0 0 55% 0;
 	}
-	.about-us__image img {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
-}
 @media (max-width: 768px) {
 	.about-us__images {
 		flex-direction: column;
@@ -159,9 +150,5 @@
 		flex: 1 1 auto;
 		padding: 0;
 		margin: 0 0 20px 0;
-	}
-	.about-us__image img {
-		max-width: 100%;
-		object-fit: cover;
 	}
 }
