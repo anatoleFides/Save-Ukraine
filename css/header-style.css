@@ -13,6 +13,7 @@
 	height: 100%;
 	z-index: 3;
 	background: #F5F5F5;
+	transition: all .8s ease;
 
 }
 @media (max-width: 768px) {
@@ -27,6 +28,7 @@
 	header.transperent:before {
 		background: transparent;
 		box-shadow: none;
+		transition: all .8s ease;
 	}
 }
 .header__body {
@@ -88,6 +90,7 @@
 .language__text {
 	position: relative;
 	z-index: 2;
+	color: #0786A5;
 }
 .language__link {
 	line-height: 19px;
@@ -97,9 +100,15 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 80px;
-	height: 20px;
+	width: 100px;
+	height: 10px;
 	z-index: 10;
+	transition: all .6s ease;
+}
+.content-header__language:hover .language__text {
+	color: #144652;
+	font-weight: 700;
+	transition: all .6s ease;
 }
 .language__link:before {
 	content: '';
