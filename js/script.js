@@ -1,27 +1,13 @@
-//Burger
-document.getElementById("burger-menu").onclick = (event) => {
-  document.getElementById("burger-menu").classList.toggle('open')
-  document.getElementById("main-menu").classList.toggle('active')
-  document.getElementsByTagName('header')[0].classList.toggle('transperent')
-  document.getElementsByTagName('body')[0].classList.toggle('hidden')
+function include (url) {
+  const script = document.createElement('script')
+
+  script.src = url;
+
+  document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-//Scroll+fixed menu
-window.onscroll = function() {
-  checkMarginToTop();
-}
+include('js/all-script.js')
 
-const nav = document.getElementById("menu-stiky");
-
-let sticky = nav.offsetTop;
-
-function checkMarginToTop() {
-  if (window.pageYOffset > sticky) {
-    nav.classList.add("menu-sticky");
-  } else {
-    nav.classList.remove("menu-sticky");
-  }
-}
 //Sliders
 if (document.querySelector('.slider-main-ukrain')){
   const swiperUkrain = new Swiper('.slider-main-ukrain', {
@@ -70,17 +56,4 @@ if (document.querySelector('.slider-main-building')){
   })
 }
 
-const arrows = document.getElementsByClassName("arrow-submenu");
 
-for (let i = 0; i < arrows.length; i++) {
-  arrows[i].onclick = (event) => {
-    event.target.classList.toggle("init")
-
-    let panel = event.target.nextElementSibling
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  }
-}

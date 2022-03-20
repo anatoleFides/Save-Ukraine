@@ -52,10 +52,14 @@
 .nav-tabs__item {
 	border: 1px solid #0786A5;
 	margin: 0 17px 0 0;
-	padding: 0 0 2px 0;
+	padding: 9px 19px;
+	color: #0786A5;
+	font-size: 16px;
+	line-height: 22px;
 }
 .nav-tabs__item.tabs-active {
 	background: #0786A5;
+	color: #fff;
 }
 .nav-tabs__item:last-child {
 	margin: 0;
@@ -65,10 +69,13 @@
 	line-height: 22px;
 	font-weight: 700;
 	color: #0786A5;
-	padding: 10px 19px;
+	padding: 0 19px;
+	display: block;
 }
-.tabs-active a.nav-tabs__link {
+.tabs-active__link {
 	color: #fff;
+	background: #0786A5;
+	padding: 2px 19px;
 }
 .tabs-donation__pages {
 	border: 1px solid #0786A5;

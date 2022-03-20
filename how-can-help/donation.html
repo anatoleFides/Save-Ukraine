@@ -97,15 +97,17 @@
 				<h3 class="donation__subtitle" id="donation-now">Підтримай Україну</h3>
 				<div class="donation__tabs tabs-donation">
 					<ul class="tabs-donation__navigation nav-tabs">
-						<li class="nav-tabs__item tabs-active">
-							<a href="#!" class="nav-tabs__link">Оплатити на картку</a>
+						<!-- <li class="nav-tabs__item ">
+							<a href="#!" class="nav-tabs__link tabs-active__link">Оплатити на картку</a>
 						</li>
 						<li class="nav-tabs__item">
 							<a href="#!" class="nav-tabs__link">Оплатити за реквізитами</a>
-						</li>
+						</li> -->
+						<li class="nav-tabs__item tabs-active" onclick="showPage(event,'page1')">Оплатити на картку</li>
+						<li class="nav-tabs__item" onclick="showPage(event, 'page2')">Оплатити за реквізитами</li>
 					</ul>
 					<ul class="tabs-donation__pages">
-						<li class="tabs-donation__page tabs-active">
+						<li class="tabs-donation__page tabs-active" id="page1">
 							<h4 class="tabs-donation__title">№1 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h4>
 							<ul class="tabs-donation__price price-donation">
 								<li class="price-donation__item">
@@ -137,7 +139,7 @@
 							</form>
 							<a href="#!" class="tabs-donation__link _btn">Пожертвувати</a>
 						</li>
-						<li class="tabs-donation__page">
+						<li class="tabs-donation__page" id="page2">
 							<h4 class="tabs-donation__title">№2 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h4>
 							<ul class="tabs-donation__price price-donation">
 								<li class="price-donation__item">
