@@ -124,8 +124,8 @@
                 </li>
               </ul>
               <form action="#" class="tabs-donation__form form-donation">
-                <div class="form-donation__item form-donation__item_text">
-                  <input type="text" class="form-donation__input" placeholder="Сума пожертвування">
+                <div class="form-donation__item input-text">
+                  <input type="text" class="input-text__custom" placeholder="Сума пожертвування" oninput="checkValue(event, 'btnId1')">
                 </div>
                 <div class="form-donation__item input-radio">
                   <div class="input-radio__item">
@@ -138,7 +138,7 @@
                   </div>
                 </div>
               </form>
-              <button type="button" class="tabs-donation__btn _btn" disabled>Пожертвувати</button>
+              <button type="button" class="tabs-donation__btn _btn" disabled id="btnId1">Пожертвувати</button>
             </li>
             <li class="tabs-donation__page" id="page2">
               <h4 class="tabs-donation__title">№2 Введіть суму пожертвування або оберіть серед запропонованих варіантів:</h4>
@@ -163,8 +163,8 @@
                 </li>
               </ul>
               <form action="#" class="tabs-donation__form form-donation">
-                <div class="form-donation__item form-donation__item_text">
-                  <input type="text" class="form-donation__input" placeholder="Сума пожертвування">
+                <div class="form-donation__item input-text">
+                  <input type="text" class="input-text__custom" placeholder="Сума пожертвування" oninput="checkValue(event, 'btnId2')">
                 </div>
                 <div class="form-donation__item input-radio">
                   <div class="input-radio__item">
@@ -177,7 +177,7 @@
                   </div>
                 </div>
               </form>
-              <button type="button" class="tabs-donation__btn _btn" disabled>Пожертвувати</button>
+              <button type="button" class="tabs-donation__btn _btn" disabled id="btnId2">Пожертвувати</button>
             </li>
           </ul>
         </div>

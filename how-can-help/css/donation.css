@@ -152,10 +152,10 @@
 .form-donation__item:first-child {
   margin: 0 24px 0 0;
 }
-.form-donation__item_text {
+.input-text {
   position: relative;
 }
-.form-donation__item_text:before {
+.input-text:before {
   content: '';
   position: absolute;
   left: 10px;
@@ -166,7 +166,7 @@
   background: url(../image/donation-money.svg);
   z-index: 3;
 }
-.form-donation__input {
+.input-text__custom {
   max-width: 270px;
   background: #EAEAEA;
   border: 1px solid #EAEAEA;
@@ -176,24 +176,23 @@
   line-height: 25px;
   color:#1BBAE1;
 }
-input[type="text"] {
-
+.input-text__custom {
   color: #1BBAE1;
 }
-input[type="text"]:focus {
+.input-text__custom:focus {
   font-weight: 700;
 }
-input[type="text"]::-webkit-input-placeholder {
+.input-text__custom::-webkit-input-placeholder {
   color: #C4C4C4;
 }
-input[type="text"]::-moz-placeholder {
+.input-text__custom::-moz-placeholder {
   color: #C4C4C4;
 }
-.form-donation__input:focus-visible {
+.input-text__custom:focus-visible {
   background: #fff;
   border: 1px solid #1BBAE1;
 }
-.form-donation__input:focus .form-donation__item_text:before{
+.input-text:focus .input-text:before{
   background: url(../image/donation-money-active.svg);
 }
 .tabs-donation__btn:disabled {

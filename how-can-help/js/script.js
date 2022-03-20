@@ -24,3 +24,22 @@ const showPage = (event, numberPage) => {
   document.getElementById(numberPage).classList.add('tabs-active')
   event.target.classList.add('tabs-active')
 }
+
+//Input
+const checkValue = (event, btnId) => {
+  const inputs = document.querySelectorAll('.input-text__custom')
+
+  for (let input of inputs) {
+    let inputValue = parseFloat(event.target.value) || 0
+
+    if (inputValue > 0) {
+      document.getElementById(btnId).disabled = false
+    } else {
+      document.getElementById(btnId).disabled = true
+      console.log(event.target)
+      event.target.innerContent = 'Невірний формат суми'
+    }
+  }
+}
+
+
