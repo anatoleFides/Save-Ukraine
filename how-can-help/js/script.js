@@ -26,6 +26,25 @@ const showPage = (event, numberPage) => {
 }
 
 //Check Input
+const inputPayCard = document.getElementById('pay-card')
+const inputPayRequisites = document.getElementById('pay-requisites')
+const inputsPay = [inputPayCard, inputPayRequisites]
+
+const btnPayCard = document.getElementById('btn-card')
+const btnPayRequisites = document.getElementById('btn-requisites')
+const btnsPay = [btnPayCard, btnPayRequisites]
+
+// const checkInputValue = () => {
+//   for (let input of inputsPay) {
+//     let valueInput = parseFloat(input.value) || 0
+
+//     console.log(input)
+//     console.log(input.value)
+//   }
+// }
+// checkInputValue()
+
+
 const checkValue = (event, btnId) => {
   let inputValue = parseFloat(event.target.value) || 0
 
@@ -41,18 +60,19 @@ const checkValue = (event, btnId) => {
 }
 
 //Insert sum
-const sumListOfCard = document.getElementsByClassName('price-card')
+const sumListOfCard = document.getElementsByClassName('pay-card')
 
 for (let sumOfCard of sumListOfCard) {
   sumOfCard.onclick = (event) => {
     for (let sumOfCard of sumListOfCard) {
-      sumOfCard.classList.remove('.sum-active')
+      sumOfCard.classList.remove('sum-active')
     }
+console.log(event.target)
+    event.target.classList.add('sum-active')
+    const valueSumCard = event.target.innerText
 
-    event.target.classList.add('.sum-active')
-    const sumValueofCard = event.target.innerText
-
-    document.getElementById('price-card').setAttribute("value", sumValueofCard)
+console.log(valueSumCard)
+    inputPayCard.setAttribute("value", valueSumCard)
   }
 }
 
@@ -61,12 +81,12 @@ const sumListOfRequisites = document.getElementsByClassName('pay-requisites')
 for (let sumOfRequisites of sumListOfRequisites) {
   sumOfRequisites.onclick = (event) => {
     for (let sumOfRequisites of sumListOfRequisites) {
-      sumOfRequisites.classList.remove('.sum-active')
+      sumOfRequisites.classList.remove('sum-active')
     }
 
-    event.target.classList.add('.sum-active')
+    event.target.classList.add('sum-active')
     const sumValueofRequisites = event.target.innerText
 
-    document.getElementById('pay-requisites').setAttribute("value", sumValueofRequisites)
+    inputPayRequisites.setAttribute("value", sumValueofRequisites)
   }
 }

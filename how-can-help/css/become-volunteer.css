@@ -1,0 +1,86 @@
+.become-volunteer {}
+.become-volunteer__container {}
+
+.become-volunteer__main-link {}
+.main-link {}
+.main-link__anchor {}
+.main-link__subanchor {}
+.main-link__submenu {}
+.become-volunteer h2 {
+  padding: 0 0 37px 0;
+}
+
+.become-volunteer__content {}
+.volunteer-content {}
+.volunteer-content__text {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
+}
+.volunteer-content__text:first-child {
+  margin: 0 0 30px 0;
+}
+.become-volunteer__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #0786A5;
+  padding: 30px 0;
+}
+.volunteer-form__body{
+  padding: 12px 0 12px 33px;
+}
+.volunteer-form__body h3 {
+  padding: 0 0 44px 0;
+}
+.volunteer-content__list {
+  margin: 0 0 30px 0;
+}
+.volunteer-content__item {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
+}
+.become-volunteer__form {}
+.volunteer-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 44px 0 100px;
+}
+.volunteer-form__image {
+  flex: 0 0 41%;
+  position: relative;
+  padding: 0 0 51% 0;
+}
+
+.volunteer-form__body {
+  flex: 1 1 auto;
+}
+.volunteer-form__form {}
+.form-volunteer {}
+.form-volunteer__item {
+  margin: 0 0 20px 0;
+}
+.form-volunteer__item:last-child {
+  margin: 0 0 34px 0;
+}
+.form-volunteer__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 0 0 7px 0;
+  color: #0786A5;
+}
+input.form-volunteer__input {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+.input-text__custom {}
+.input-radio {}
+.input-radio__item {}
+.input-radio__default {}
+.input-radio__custom {}
+.form-volunteer_form-volunteer_item {}
+.form-volunteer__input-tel {}
+.form-volunteer__btn {}
