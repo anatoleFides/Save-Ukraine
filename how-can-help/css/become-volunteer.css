@@ -116,12 +116,15 @@ input.form-volunteer__input {
 .form-volunteer.form-hidden{
   display: none;
 }
+
 .volunteer-form__sending {
-  display: none;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
+}
+.sending-form {
+  display: none;
 }
 .sending-form__content {
   color: #00AD64;
