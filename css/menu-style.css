@@ -60,7 +60,7 @@
     align-items: start;
     justify-content: space-between;
     padding: 95px 8px 0 8px;
-    background: linear-gradient(to bottom, #ADD8E6, rgba(255, 213, 0, 0.9));
+    background: #F5F5F5;
     transition: all .8s ease;
   }
   .menu__row.active {
@@ -74,7 +74,7 @@
     height: 2px;
     left: 0;
     top: 80px;
-    background: #696969;
+    background: #FFD500;
   }
   .menu__list {
     position: relative;
@@ -87,7 +87,7 @@
     padding: 0 0 0 35px;
   }
   .menu__link {
-    color: #696969;
+    color: #0786A5;
     font-size: 18px;
     display: block;
     width: 100%;
@@ -142,9 +142,6 @@
     margin: 0 0 0 -35px;
     padding: 0 0 0 35px;
     transition: all .8s ease;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
   }
   .menu__sub-list li:last-child {
     margin: 0 0 3px 0;
@@ -153,23 +150,5 @@
 @media (max-width: 380px) {
   .menu__sub-list {
     width: 180px;
-  }
-}
-/*ARROW-SUBMENU------------------------------------------------------*/
-@media (max-width: 768px) {
-  .arrow-submenu {
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 13px;
-    left: 10px;
-    border-top: 10px solid #144652;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    transition: all 0.4s ease-out;
-  }
-  .arrow-submenu.init{
-    transform: rotate(-180deg);
-    transition: all 0.4s ease-out;
   }
 }

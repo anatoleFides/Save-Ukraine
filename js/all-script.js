@@ -23,31 +23,13 @@ window.onscroll = function() {
   checkMarginToTop();
 }
 
-//Show submenu mobile version
-const arrows = document.getElementsByClassName("arrow-submenu");
-
-for (let i = 0; i < arrows.length; i++) {
-  arrows[i].onclick = (event) => {
-    event.target.classList.toggle("init")
-
-    let panel = event.target.nextElementSibling
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null
-    } else {
-      panel.style.maxHeight = `${panel.scrollHeight}px`
-    } 
-  }
-}
-
 //scroll to top
 const scrollElem = document.getElementById("scrollToTop")
 
 window.onscroll = function(event) {
-  if (window.scrollY > 200) {
-    scrollElem.style.opacity = "1"
-  } else {
-    scrollElem.style.opacity = "0";
-   }
+  window.scrollY > 200 
+    ? scrollElem.style.opacity = "1" 
+    : scrollElem.style.opacity = "0"
 }
 let timeOut
 

@@ -166,17 +166,16 @@ button{
   text-decoration: underline;
   transition: all .6s ease;
 }
-
 #scrollToTop{
   position: fixed;
-  bottom: 440px;
-  right: 85px;
+  bottom: 40px;
+  right: 30px;
   font-size: 28px;
   border-radius: 50%;
   background: #F5F5F5;
   color: #7CC7DA;
   transform: rotate(-90deg);
-  padding: 25px;
+  padding: 15px;
   cursor: pointer;
   opacity: 0;
   transition: all .6s ease;

@@ -23,12 +23,10 @@
 	text-decoration: underline;
 	transition: all .6s ease;
 }
-
 .how-help__title {
 	color: #0786A5;
 	padding: 0 0 77px 0;
 }
-.title {}
 .how-help__body {
 	display: flex;
 	justify-content: space-between;
