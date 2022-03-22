@@ -18,7 +18,7 @@ body{
 .gif-ukraine {
   position: absolute;
   z-index: 5;
-  top: 130px;
+  top: 10px;
   width: 60px;
   height: 60px;
 }
@@ -33,7 +33,7 @@ body{
 .gif-ukraine-right img {
   transform: rotateY(-180deg);
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .flag-gifs {
     display: none;
   }
@@ -167,22 +167,17 @@ button{
   transition: all .6s ease;
 }
 
-#anchor-top{
+#scrollToTop{
   position: fixed;
-  bottom: 16px;
-  right: 16px;
-  font-size: 24px;
+  bottom: 440px;
+  right: 85px;
+  font-size: 28px;
   border-radius: 50%;
-  background: #0786A5;
-  color: #fff;
-  transform: rotate(90deg);
-  padding: 7px;
-  visibility: visible;
-  opacity: 1;
-  transition: all .6s ease;
-}
-#anchor-top.show{
-  visibility: visible;
-  opacity: 1;
+  background: #F5F5F5;
+  color: #7CC7DA;
+  transform: rotate(-90deg);
+  padding: 25px;
+  cursor: pointer;
+  opacity: 0;
   transition: all .6s ease;
 }

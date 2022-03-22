@@ -7,10 +7,6 @@ document.getElementById("burger-menu").onclick = (event) => {
 }
 
 //Scroll+fixed menu
-window.onscroll = function() {
-  checkMarginToTop();
-}
-
 const nav = document.getElementById("menu-stiky");
 
 let sticky = nav.offsetTop;
@@ -21,6 +17,10 @@ function checkMarginToTop() {
   } else {
     nav.classList.remove("menu-sticky");
   }
+}
+
+window.onscroll = function() {
+  checkMarginToTop();
 }
 
 //Show submenu mobile version
@@ -39,37 +39,31 @@ for (let i = 0; i < arrows.length; i++) {
   }
 }
 
-//Anchor to top
-// document.getElementById('anchor-top').onclick = (event) => {
-//   function up () {
-//     let top = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+//scroll to top
+const scrollElem = document.getElementById("scrollToTop")
 
-//     if(top > 0) {
-//      window.scrollBy(0, ((top+100)/-10))
+window.onscroll = function(event) {
+  if (window.scrollY > 200) {
+    scrollElem.style.opacity = "1"
+  } else {
+    scrollElem.style.opacity = "0";
+   }
+}
+let timeOut
 
-//       const t = setTimeout(() => up(), 20)
-//     } else clearTimeout(t)
-//       return false
-//     }
-// }
+function goUp() {
+  const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
 
-$(document).ready(function(){
-       $('#scroller').hide();  
-      //fade in/out based on scrollTop value
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-          $('#scroller').fadeIn();
-        }else{
-          $('#scroller').fadeOut();
-          // alert ('hello word');
-        }
-      });
-     
-      // scroll body to 0px on click
-      $('#scroller').click(function () {
-        $('body,html').animate({
-          scrollTop: 0
-        }, 400);
-        return false;
-      });
-    });
+  if(top > 0) {
+    window.scrollBy(0,-100)
+
+    timeOut = setTimeout(() => goUp(), 20)
+
+  } else clearTimeout(timeOut)
+}
+
+scrollElem.onclick = (event) => {
+  event.preventDefault()
+
+  goUp()
+}
