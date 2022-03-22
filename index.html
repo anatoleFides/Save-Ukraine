@@ -11,6 +11,14 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
+  <div class="flag-gifs">
+    <div class="gif-ukraine gif-ukraine-left">
+      <img src="image/flag-ukraine.gif" alt="Прапор України" class="image-responsive">
+    </div>
+    <div class="gif-ukraine gif-ukraine-right">
+      <img src="image/flag-ukraine.gif" alt="Прапор України" class="image-responsive">
+    </div>
+  </div>
   <div class="wrapper" id="main-page">
     <header class="header">
       <div class="header__container container">
@@ -68,7 +76,7 @@
                   <a href="reports/reports.html#reports" class="menu__link">Звіти</a>
                   <span class="arrow-submenu"></span>
                   <ul class="menu__sub-list">
-                    <li><a href="#" class="menu__sub-link">Звіт 1</a></li>
+                    <li><a href="reports/report-item1.html#report-item1" class="menu__sub-link">Звіт 1</a></li>
                     <li><a href="#" class="menu__sub-link">Звіт 2</a></li>
                   </ul>
                 </li>
@@ -271,7 +279,7 @@
 					</div>
 				</div>
 			</section>
-		</main>
+    </main>
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__row">
@@ -337,6 +345,7 @@
       </div>
     </footer>
   </div>
+  <a class="icon-circle-left" href="#" id="anchor-top" onclick="return up()"></a>
   <script src="js/script.js"></script>
 </body>
 </html>

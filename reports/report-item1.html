@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Як я можу допомогти?</title>
-  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+  <title>Звіт</title>
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-  <div class="wrapper" id="how-can-help">
+  <div class="wrapper">
     <header class="header">
       <div class="header__container container">
         <div class="header__body">
@@ -54,18 +55,18 @@
                 </ul>
               </li>
               <li class="menu__item">
-                <a href="" class="menu__link">Як я можу допомогти</a>
+                <a href="../how-can-help/how-can-help.html#how-can-help" class="menu__link">Як я можу допомогти</a>
                 <span class="arrow-submenu"></span>
                 <ul class="menu__sub-list">
-                  <li><a href="become-volunteer.html#become-volunteer" class="menu__sub-link">Стати волонтером</a></li>
-                  <li><a href="donation.html#donation" class="menu__sub-link">Пожертвувати кошти</a></li>
+                  <li><a href="../how-can-help/become-volunteer.html#become-volunteer" class="menu__sub-link">Стати волонтером</a></li>
+                  <li><a href="../how-can-help/donation.html#donation" class="menu__sub-link">Пожертвувати кошти</a></li>
                 </ul>
               </li>
               <li class="menu__item">
-                <a href="../reports/reports.html#reports" class="menu__link">Звіти</a>
+                <a href="reports.html#reports" class="menu__link">Звіти</a>
                 <span class="arrow-submenu"></span>
                 <ul class="menu__sub-list">
-                  <li><a href="../reports/report-item1.html#report-item1" class="menu__sub-link">Звіт 1</a></li>
+                  <li><a href="#" class="menu__sub-link">Звіт 1</a></li>
                   <li><a href="#" class="menu__sub-link">Звіт 2</a></li>
                 </ul>
               </li>
@@ -74,35 +75,59 @@
             </ul>
           </div>
           <div class="header__donate donate">
-            <a href="donation.html#donation-now" class="donate__link _btn">Допомогти</a>
+            <a href="../how-can-help/donation.html#donation-now" class="donate__link _btn">Допомогти</a>
           </div>
         </div>
       </div>
     </nav>
-    <section class="how-help">
-      <div class="how-help__container container">
+    <section class="report" id="report-item1">
+      <div class="container__report container">
         <div class="how-help__main-link main-link">
           <a href="../index.html#main-page" class="main-link__anchor">Головна</a>
-          <p class="main-link__submenu"> / Як я можу допомогти?</p>
+          <a href="reports.html#reports" class="main-link__subanchor">/ Звіти</a>
+          <p class="main-link__submenu"> / Звіт 1</p>
         </div>
-        <h2 class="how-help__title title">Як я можу допомогти?</h2>
-        <div class="how-help__body">
-          <div class="how-help__item">
-            <div class="how-help__image">
-              <img class="image-responsive" src="image/how-can-help/become-volunteer.png" alt="Volonter">
-            </div>
-            <div class="how-help__row">
-              <h3 class="how-help__subtitle">Стати Волонтером</h3>
-              <a href="become-volunteer.html#become-volunteer" class="how-help__link icon-arrow-right2"></a>
-            </div>
+        <h2 class="reports__title title">Звіт від 15-03-2022, 15:00</h2>
+        <p class="report__city">Харків</p>
+        <p class="report__parag">
+          Міжнародний Благодійний фонд «Врятувати Україну» - це не прибуткова організація, яка має на меті уникнути гуманітарної катастрофи в Україні, викликаної військовою агресією з боку Росії.
+Наш фонд надаватиме гуманітарну допомогу всім гостро нужденним лише через перевірених волонтерів, або власними силами під час військових дій і після них.
+Після перемоги України фонд займеться відновленням найкрасивішого рідного міста - героя Харкова.
+        </p>
+        <div class="report__slider slider-report">
+          <div class="slider-report__big">
+            <p>
+              <img src="image/reports_01.png" alt="Україна волонтери" id="bigImg" class="image-responsive">
+            </p>
           </div>
-          <div class="how-help__item">
-            <div class="how-help__image">
-              <img class="image-responsive" src="image/how-can-help/pay-money.png" alt="Volonter">
+          <div class="slider-report__all all-slider">
+            <div class="all-slider__window">
+            <div id="all-slider-report" class="all-slider__list">
+              <div class="all-slider__item">
+                <a href="image/reports_01.png" class="all-slider__link" title="UA Volunteer">
+                  <img src="image/reports_01.png" alt="">
+                </a>
+              </div>
+              <div class="all-slider__item">
+                <a href="image/reports_02.png" class="all-slider__link" title="UA Volunteer">
+                  <img src="image/reports_02.png" alt="">
+                </a>
+              </div>
+              <div class="all-slider__item">
+                <a href="image/reports_03.png" class="all-slider__link" title="UA Volunteer">
+                  <img src="image/reports_03.png" alt="">
+                </a>
+              </div>
+              <div class="all-slider__item">
+                <a href="image/reports_04.png" class="all-slider__link" title="UA Volunteer">
+                  <img src="image/reports_04.png" alt="">
+                </a>
+              </div>
             </div>
-            <div class="how-help__row">
-              <h3 class="how-help__subtitle">Пожертвувати Кошти</h3>
-              <a href="donation.html#donation-now" class="how-help__link icon-arrow-right2"></a>
+            </div>
+            <div class="buttons">
+              <button class="navigation icon-arrow-right2" id="previous"></button>
+              <button class="navigation icon-arrow-right2" id="next"></button>
             </div>
           </div>
         </div>
@@ -111,9 +136,6 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__row">
-          <div class="footer__donate donate">
-            <a href="donation.html#donation-now" class="donate__link _btn">Допомогти</a>
-          </div>
           <div class="footer__logo logo">
             <a href="#!" class="logo__link">
               <img src="../image/LOGO.svg" alt="logotip Ukrane">
