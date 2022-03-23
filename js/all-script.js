@@ -7,37 +7,35 @@ document.getElementById("burger-menu").onclick = (event) => {
 }
 
 //Scroll+fixed menu
-const nav = document.getElementById("menu-stiky");
+const nav = document.getElementById('menu-stiky')
 
 let sticky = nav.offsetTop;
 
-function checkMarginToTop() {
-  if (window.pageYOffset > sticky) {
-    nav.classList.add("menu-sticky");
-  } else {
-    nav.classList.remove("menu-sticky");
-  }
+function checkMarginToTop () {
+  window.pageYOffset > sticky
+    ? nav.classList.add('menu-sticky')
+    : nav.classList.remove('menu-sticky')
 }
 
-window.onscroll = function() {
-  checkMarginToTop();
-}
+//Scroll to top
+const scrollElem = document.getElementById('scrollToTop')
 
-//scroll to top
-const scrollElem = document.getElementById("scrollToTop")
+window.onscroll = (event) => {
 
-window.onscroll = function(event) {
+  checkMarginToTop() //stiky menu
+
   window.scrollY > 200 
-    ? scrollElem.style.opacity = "1" 
-    : scrollElem.style.opacity = "0"
+    ? scrollElem.style.opacity = 1
+    : scrollElem.style.opacity = 0
 }
-let timeOut
 
-function goUp() {
+function goUp () {
   const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
 
+  let timeOut
+
   if(top > 0) {
-    window.scrollBy(0,-100)
+    window.scrollBy(0, -100)
 
     timeOut = setTimeout(() => goUp(), 20)
 
@@ -45,6 +43,7 @@ function goUp() {
 }
 
 scrollElem.onclick = (event) => {
+
   event.preventDefault()
 
   goUp()

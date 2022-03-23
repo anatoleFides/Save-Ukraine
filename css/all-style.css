@@ -91,7 +91,7 @@ button{
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 5;
+  z-index: 3;
 }
 .contacts__item a {
   font-size: 14px;
@@ -100,7 +100,7 @@ button{
   padding: 4px 0 4px 24px ;
   display: block;
   position: relative;
-  z-index: 10;
+  z-index: 5;
   transition: all .6s ease;
 }
 .contacts__item a:hover {
@@ -175,8 +175,10 @@ button{
   background: #F5F5F5;
   color: #7CC7DA;
   transform: rotate(-90deg);
-  padding: 15px;
+  padding: 12px;
   cursor: pointer;
   opacity: 0;
   transition: all .6s ease;
+  z-index: 5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
 }
