@@ -1,20 +1,20 @@
 /*ABOUT US-------------------------------------------------------------*/
-.about-us__text {
+.about-fond__text {
   position: relative;
   background: #FFD500;
   padding: 65px 145px 40px;
 }
 @media (max-width: 768px) {
-  .about-us__text {
+  .about-fond__text {
     padding: 35px 35px 20px;
   }
 }
 @media (max-width: 500px) {
-  .about-us__text {
+  .about-fond__text {
     padding: 35px 15px 15px;
   }
 }
-.about-us__text:before {
+.about-fond__text:before {
   content: '';
   position: absolute;
   left: 0;
@@ -24,7 +24,7 @@
   z-index: 5;
   background: #0786A5;
 }
-.about-us__parag {
+.about-fond__parag {
   color: #144652;
   font-weight: 600;
   font-size: 18px;
@@ -33,27 +33,27 @@
   text-align: justify;
 }
 @media (max-width: 768px) {
-  .about-us__parag {
+  .about-fond__parag {
     font-size: 16px;
   }
 }
-.about-us__parag:last-child {
+.about-fond__parag:last-child {
   margin: 0;
 }
-.about-us__content {
+.about-fond__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.about-us__content-item {
+.about-fond__content-item {
   flex: 0 0 33.33%;
   padding: 50px 0;
   text-align: center;
 }
-.about-us__content-item:nth-child(2) {
+.about-fond__content-item:nth-child(2) {
   position: relative;
 }
-.about-us__content-item:nth-child(2):before, .about-us__content-item:nth-child(2):after {
+.about-fond__content-item:nth-child(2):before, .about-fond__content-item:nth-child(2):after {
   position: absolute;
   content: '';
   top: 50%;
@@ -62,29 +62,29 @@
   height: 200px;
   background: #0786A5;
 }
-.about-us__content-item:nth-child(2):before {
+.about-fond__content-item:nth-child(2):before {
   left: 0;
 }
-.about-us__content-item:nth-child(2):after {
+.about-fond__content-item:nth-child(2):after {
   right: 0;
 }
 @media (max-width: 992px) {
-  .about-us__content-item:nth-child(2):before, .about-us__content-item:nth-child(2):after {
+  .about-fond__content-item:nth-child(2):before, .about-fond__content-item:nth-child(2):after {
     display: none;
   }
 }
 @media (max-width: 768px) {
-  .about-us__content-item:nth-child(2):before, .about-us__content-item:nth-child(2):after {
+  .about-fond__content-item:nth-child(2):before, .about-fond__content-item:nth-child(2):after {
     display: block;
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
     height: 1px;
   }
-  .about-us__content-item:nth-child(2):before {
+  .about-fond__content-item:nth-child(2):before {
     top: 0;
   }
-  .about-us__content-item:nth-child(2):after {
+  .about-fond__content-item:nth-child(2):after {
     top: 100%;
   }
 }
@@ -99,7 +99,7 @@
   text-align: left;
 }
 @media (max-width: 992px) {
-  .about-us__content-item {
+  .about-fond__content-item {
     flex: 0 0 50%;
     padding: 40px 0;
   }
@@ -108,7 +108,7 @@
   }
 }
 @media (max-width: 768px) {
-  .about-us__content-item {
+  .about-fond__content-item {
     flex: 1 1 auto;
     padding: 30px 0 ;
   }
@@ -123,27 +123,27 @@
     padding: 25px 0 0 0;
   }
 }
-.about-us__images {
+.about-fond__images {
   display: flex;
   justify-content: space-between;
   margin: 0 -25px 95px;
 }
-.about-us__images_bound {
+.about-fond__images_bound {
   flex: 0 1 50%;
   width: 100%;
   padding: 0 25px;
 }
-  .about-us__image {
+  .about-fond__image {
     position: relative;
     padding: 0 0 55% 0;
   }
 @media (max-width: 768px) {
-  .about-us__images {
+  .about-fond__images {
     flex-direction: column;
     align-items: center;
     margin: 0;
   }
-  .about-us__images_bound{
+  .about-fond__images_bound{
     flex: 1 1 auto;
     padding: 0;
     margin: 0 0 20px 0;
