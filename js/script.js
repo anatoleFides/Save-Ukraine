@@ -55,5 +55,3 @@ if (document.querySelector('.slider-main-building')){
     },
   })
 }
-
-

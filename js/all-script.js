@@ -1,9 +1,11 @@
   //Burger
-document.getElementById("burger-menu").onclick = (event) => {
-  document.getElementById("burger-menu").classList.toggle('open')
-  document.getElementById("main-menu").classList.toggle('active')
+document.getElementById('burger-menu').onclick = (event) => {
+  document.getElementById('burger-menu').classList.toggle('open')
+  document.getElementById('main-menu').classList.toggle('active')
   document.getElementsByTagName('header')[0].classList.toggle('transperent')
   document.getElementsByTagName('body')[0].classList.toggle('hidden')
+  document.getElementById('content-header').classList.toggle('active-contacts')
+  document.getElementsByClassName('content-header__contacts')[0].classList.toggle('active-contacts')
 }
 
 //Scroll+fixed menu
