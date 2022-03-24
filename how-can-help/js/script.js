@@ -26,67 +26,81 @@ const showPage = (event, numberPage) => {
 }
 
 //Check Input
+const checkValue = (prop, btnId) => {
+  let inputValue = parseFloat(prop.value.trim()) || 0
+
+console.log(inputValue, '<===inputValue')
+
+console.log((inputValue > 0), '<===inputValue < 0')
+
+  if (inputValue > 0) {
+    Object.assign(prop.nextElementSibling, {
+      innerText: ''
+    })
+ } else {
+    Object.assign(prop.nextElementSibling, {
+      innerText: 'Невірний формат суми'
+    })
+  }
+
+  (prop.value === '') && (prop.nextElementSibling.innerText = '')
+
+  Object.assign(btnId, {
+    disabled: !(inputValue > 0)
+  })
+
+  // return value
+}
+
 const inputPayCard = document.getElementById('pay-card')
 const inputPayRequisites = document.getElementById('pay-requisites')
-const inputsPay = [inputPayCard, inputPayRequisites]
 
 const btnPayCard = document.getElementById('btn-card')
 const btnPayRequisites = document.getElementById('btn-requisites')
-const btnsPay = [btnPayCard, btnPayRequisites]
 
-// const checkInputValue = () => {
-//   for (let input of inputsPay) {
-//     let valueInput = parseFloat(input.value) || 0
+inputPayCard.oninput = (event) => checkValue(event.target, btnPayCard)
 
-//     console.log(input)
-//     console.log(input.value)
-//   }
-// }
-// checkInputValue()
-
-
-const checkValue = (event, btnId) => {
-  let inputValue = parseFloat(event.target.value) || 0
-
-  if (inputValue > 0) {
-    document.getElementById(btnId).disabled = false
-    event.target.nextElementSibling.innerText = ''
-  } else {
-    document.getElementById(btnId).disabled = true
-    event.target.nextElementSibling.innerText = 'Невірний формат суми'
-  }
-
-  (event.target.value === '') && (event.target.nextElementSibling.innerText = '')
-}
+inputPayRequisites.oninput = (event) => checkValue(event.target, btnPayRequisites)
 
 //Insert sum
 const sumListOfCard = document.getElementsByClassName('pay-card')
+const sumListOfRequisites = document.getElementsByClassName('pay-requisites')
 
 for (let sumOfCard of sumListOfCard) {
   sumOfCard.onclick = (event) => {
-    for (let sumOfCard of sumListOfCard) {
-      sumOfCard.classList.remove('sum-active')
-    }
-console.log(event.target)
-    event.target.classList.add('sum-active')
-    const valueSumCard = event.target.innerText
-
-console.log(valueSumCard)
-    inputPayCard.setAttribute("value", valueSumCard)
+    insertValueCard(event.target, sumListOfCard)
   }
 }
 
-const sumListOfRequisites = document.getElementsByClassName('pay-requisites')
-
 for (let sumOfRequisites of sumListOfRequisites) {
   sumOfRequisites.onclick = (event) => {
-    for (let sumOfRequisites of sumListOfRequisites) {
-      sumOfRequisites.classList.remove('sum-active')
-    }
-
-    event.target.classList.add('sum-active')
-    const sumValueofRequisites = event.target.innerText
-
-    inputPayRequisites.setAttribute("value", sumValueofRequisites)
+    insertValueRequisites(event.target, sumListOfRequisites)
   }
+}
+const toggleSumActive = (itemActive, sumList) => {
+    for (let sumItem of sumList) {
+    sumItem.classList.remove('sum-active')
+  }
+
+  itemActive.classList.add('sum-active')
+}
+
+const insertValueCard = (property, sumList) => {
+  toggleSumActive(property, sumList)
+
+  console.log(property.textContent)
+
+  Object.assign(inputPayCard, {
+    value: property.textContent
+  })
+}
+
+const insertValueRequisites = (property, sumList) => {
+  toggleSumActive(property, sumList)
+
+  console.log(property.textContent)
+
+  Object.assign(inputPayRequisites, {
+    value: property.textContent
+  })
 }

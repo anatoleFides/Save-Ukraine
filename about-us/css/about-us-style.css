@@ -1,0 +1,30 @@
+.about-us__content {
+  text-align: center;
+}
+.about-us__image {
+  position: relative;
+  padding: 0 0 50% 0;
+}
+.about-us__slogan {
+  font-style: i.about-us__slogantalic;
+  font-size: 18px;
+  line-height: 25px;
+  color: #0786A5;
+  padding: 50px 18%;
+  position: relative;
+}
+.about-us__slogan:before,
+.about-us__slogan:after {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  top: 0;
+}
+.about-us__slogan:before {
+  left: 0;
+}
+.about-us__slogan:after {
+  right: 0;
+  transform: rotate(-180deg);
+}

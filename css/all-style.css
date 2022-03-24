@@ -64,6 +64,7 @@ button{
   line-height: 76px;
   font-weight: 700;
   padding: 40px 0;
+  color: #0786A5;
 }
 .main__title{
   color: #FFD500;
@@ -75,6 +76,11 @@ button{
     font-weight: 700;
     padding: 25px 0 25px;
   }
+}
+.text-parag {
+  font-size: 18px;
+  line-height: 25px;
+  color: #144652;
 }
 .contacts__item {
   position: relative;
