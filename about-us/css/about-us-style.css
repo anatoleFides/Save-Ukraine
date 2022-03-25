@@ -82,6 +82,7 @@
 .purpose__title{
   padding: 24px 0 0 0;
 }
+
 .purpose__container {
   display: flex;
   justify-content: space-between;
@@ -95,25 +96,20 @@
   position: relative;
   padding: 0 0 72% 0;
 }
-@media (max-width: 768px) {
-  .purpose__image {
-    padding: 0 0 95% 0;
-  }
-}
-@media (max-width: 650px) {
-/*  .purpose__container {
+@media (max-width: 550px) {
+  .purpose__container {
     flex-direction: column;
-  }*/
+  }
   .purpose__content {
-    /*flex: 0 1 100%;*/
+    flex: 0 1 100%;
     padding: 16px 0;
   }
-  .purpose__content_big {
-
-  }
   .purpose__image {
-    /*flex: 0 0 100%;*/
-    padding: 0 0 50% 0;
+    flex: 0 1 100%;
+    padding: 0 0 130% 0;
+}
+  .purpose__image img {
+    object-position: center 19%;
   }
 }
 .about-us__item-li{
