@@ -60,12 +60,12 @@
     justify-content: space-between;
     padding: 145px 8px 0 8px;
     background: #F5F5F5;
-    transition: all .4s ease;
+    transition: all .8s ease;
     flex-direction: column;
   }
   .menu__row.active {
     left: 0;
-    transition: all .4s ease;
+    transition: all .3s ease;
   }
   .menu__row:before {
     content: '';
