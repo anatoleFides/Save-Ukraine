@@ -1,4 +1,4 @@
-function include (url) {
+const include = (url) => {
   const script = document.createElement('script')
 
   script.src = url;
