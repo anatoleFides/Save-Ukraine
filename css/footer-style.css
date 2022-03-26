@@ -31,12 +31,9 @@
   background: #FFD500;
 }
 @media (max-width: 768px) {
-  .footer__logo {
-    display: none;
-  }
-  .footer__row {
+  /*.footer__row {
     flex-direction: column;
-  }
+  }*/
 }
 .footer__body {
   display: flex;
