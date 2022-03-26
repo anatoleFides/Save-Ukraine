@@ -105,6 +105,7 @@ button{
 .contacts__item {
   position: relative;
   margin: 0 0 10px 0;
+  color: #0786A5;
   transition: all .6s ease;
 }
 .contacts__item:hover {

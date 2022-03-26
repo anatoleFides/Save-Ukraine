@@ -73,6 +73,9 @@
   }
 }
 .contacts__items {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
   margin: 0 0 0 14px;
 }
 .contacts__items .contacts__item:first-child {
@@ -89,6 +92,9 @@
   transition: all .6s ease;
 }
 .messengers__items {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
   margin: 0 0 0 14px;
 }
 .messengers__items a{
@@ -144,6 +150,11 @@
   text-decoration-line: underline;
   color: #0786A5;
   padding: 0 0 12px 0;
+  transition: color .6s ease;
+}
+.links-help a:hover {
+  transition: color .6s ease;
+  color: #144652;
 }
 .links-help a:last-child {
   padding: 0;
