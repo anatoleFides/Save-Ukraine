@@ -10,11 +10,6 @@
 .contacts__elem {
   flex: 0 1 33.33%;
 }
-.contacts__elem:first-child {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: stretch;
-}
 .contacts__subtitle {
   font-weight: 700;
   font-size: 18px;
@@ -44,8 +39,8 @@
   display: inline-block;
 }
 #map {
-  min-height: 328px;
+  min-height: 400px;
   width: 100%;
-  background: #6969;
+  /*background: #6969;*/
   margin: 0 0 55px 0;
 }
