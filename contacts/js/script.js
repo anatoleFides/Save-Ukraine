@@ -15,34 +15,20 @@ function initMap () {
     zoom: 16,
     center: pos,
     styles: [
-    {
+      {"stylers": [
+        { "hue": "#007fff" },
+        { "saturation": 89 }]
+      },
+      { "featureType": "water",
         "stylers": [
-            {
-                "hue": "#007fff"
-            },
-            {
-                "saturation": 89
-            }
-        ]
-    },
-    {
-        "featureType": "water",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.country",
+          { "color": "#ffffff" }]
+      },
+      { "featureType": "administrative.country",
         "elementType": "labels",
         "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    }
-]
+          { "visibility": "off" }]
+      }
+    ]
   }
 
   const myMap = new google.maps.Map(myElem, myOptions)
@@ -54,16 +40,4 @@ function initMap () {
     icon: 'image/Marker.svg',
     animation: google.maps.Animation.BOUNCE
   })
-//   function addMarker(properties){
-
-//     marker.setIcon("../image/Marker.svg");
-
-// 		// var infowindow = new google.maps.InfoWindow({
-// 		// 	content: properties.info,
-// 		// 	maxWidth: 135
-// 		// })
-//   //   marker.addListener('click', function() {
-// 		// 	infowindow.open(myMap, marker);
-// 		// })
-//   }
 }

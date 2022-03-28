@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 -16px 60px -16px;
+  margin: 30px -16px 60px -16px;
 }
 .how-help__item {
   position: relative;

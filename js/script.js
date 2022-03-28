@@ -24,7 +24,7 @@ if (document.querySelector('.slider-main-ukrain')){
     parallax: true,
     autoplay: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination'
     },
     navigation: {
       nextEl: '.slider-main-ukrain .slider-arrows-next',
