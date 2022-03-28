@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>БФ «Врятувати Україну»</title>
   <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Open Sans">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -79,49 +80,82 @@
         <div class="how-help__main-link main-link">
           <a href="../index.html#main-page" class="main-link__anchor">Головна</a>
           <a href="reports.html#reports" class="main-link__subanchor">/ Звіти</a>
-          <p class="main-link__submenu"> / Звіт 1</p>
+          <p class="main-link__submenu"> / Звіт від 15-03-2022, 15:00</p>
         </div>
         <h2 class="reports__title title">Звіт від 15-03-2022, 15:00</h2>
-        <p class="report__city">Харків</p>
-        <p class="report__parag">
-          Міжнародний Благодійний фонд «Врятувати Україну» - це не прибуткова організація, яка має на меті уникнути гуманітарної катастрофи в Україні, викликаної військовою агресією з боку Росії.
+        <p class="report__city text-parag">Харків</p>
+        <p class="report__parag text-parag">Міжнародний Благодійний фонд «Врятувати Україну» - це не прибуткова організація, яка має на меті уникнути гуманітарної катастрофи в Україні, викликаної військовою агресією з боку Росії.
 Наш фонд надаватиме гуманітарну допомогу всім гостро нужденним лише через перевірених волонтерів, або власними силами під час військових дій і після них.
-Після перемоги України фонд займеться відновленням найкрасивішого рідного міста - героя Харкова.
-        </p>
+Після перемоги України фонд займеться відновленням найкрасивішого рідного міста - героя Харкова.</p>
         <div class="report__slider slider-report">
-          <div class="slider-report__big">
-            <p>
-              <img src="image/reports_01.png" alt="Україна волонтери" id="bigImg" class="image-responsive" loading="lazy">
-            </p>
+          <div class="swiper swiper-report__big">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_01.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_02.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_03.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_04.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_01.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_02.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_03.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_04.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_01.png">
+              </div>
+              <div class="swiper-slide slide-report__big">
+                <img src="image/reports_02.png">
+              </div>
+            </div>
+            <div class="swiper-report-arrows swiper-arrow__next icon-arrow-right2"></div>
+            <div class="swiper-report-arrows swiper-arrow__prev icon-arrow-right2"></div>
           </div>
-          <div class="slider-report__all all-slider">
-            <div class="all-slider__window">
-            <div id="all-slider-report" class="all-slider__list">
-              <div class="all-slider__item">
-                <a href="image/reports_01.png" class="all-slider__link" title="UA Volunteer" loading="lazy">
-                  <img src="image/reports_01.png" alt="">
-                </a>
+          <div thumbsSlider="" class="swiper swiper-report__small">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_01.png">
               </div>
-              <div class="all-slider__item">
-                <a href="image/reports_02.png" class="all-slider__link" title="UA Volunteer" loading="lazy">
-                  <img src="image/reports_02.png" alt="">
-                </a>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_02.png">
               </div>
-              <div class="all-slider__item">
-                <a href="image/reports_03.png" class="all-slider__link" title="UA Volunteer" loading="lazy">
-                  <img src="image/reports_03.png" alt="">
-                </a>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_03.png">
               </div>
-              <div class="all-slider__item">
-                <a href="image/reports_04.png" class="all-slider__link" title="UA Volunteer" loading="lazy">
-                  <img src="image/reports_04.png" alt="">
-                </a>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_04.png">
               </div>
-            </div>
-            </div>
-            <div class="buttons">
-              <button class="navigation icon-arrow-right2" id="previous"></button>
-              <button class="navigation icon-arrow-right2" id="next"></button>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_01.png">
+              </div>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_02.png">
+              </div>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_03.png">
+              </div>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_04.png">
+              </div>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_01.png">
+              </div>
+              <div class="swiper-slide slide-report__small">
+                <img src="image/reports_02.png">
+              </div>
             </div>
           </div>
         </div>
@@ -131,10 +165,11 @@
       <div class="report-arrows__container container">
         <div class="report-arrows__body">
           <div class="report-arrows__prev">
-            <a href="" class="report-arrows__link icon-arrow-right2">Подивитись наступний звіт</a>
+            <a href="" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись наступний звіт</span></a>
           </div>
+          <div class="text-report__show">Звіти</div>
           <div class="report-arrows__next">
-            <a href="" class="report-arrows__link icon-arrow-right2">Подивитись попередній звіт</a>
+            <a href="" class="report-arrows__link icon-arrow-right2"><span class="arrow-text__hidden">Подивитись попередній звіт</span></a>
           </div>
         </div>
       </div>
