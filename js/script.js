@@ -277,7 +277,8 @@ const addClassActive = (property) => property.classList.add('sum-active')
 //End page donation Insert value
 
 //Check form volunteer
-const nameRule = /^[A-Za-z]{2,10}$/
+const nameRule = /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15}){0,1}$|^[A-Z]{0,1}[a-z]{1,15}( [A-Z]{0,1}[a-z]{1,15}){0,1}$/
+const cityRule = /^[A-Za-z]{2,150}$/
 const telephoneRule = /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
 
 const inputName = document.getElementById('input-name')
@@ -288,11 +289,15 @@ const btnBecomeVolunteer = document.getElementById('volunter-btn')
 const validateName = (value) => {
   const result = Boolean(value.match(nameRule))
 
+  console.log(result)
+
   inputCity.disabled = !result
 }
 
 const validateCity = (value) => {
-  const result = Boolean(value.match(nameRule))
+  const result = Boolean(value.match(inputCity))
+
+console.log(result)
 
   inputTel.disabled = !result
 }
@@ -300,15 +305,17 @@ const validateCity = (value) => {
 const validateTel = (value) => {
   const result = Boolean(value.match(telephoneRule))
 
+console.log(result)
+
   btnBecomeVolunteer.disabled = !result
 }
 
 const funcsValidate = [validateName, validateCity, validateTel]
 
-// ; [inputName, inputCity, inputTel]
-//   .map((item, index) => Object.assign(item, {
-//     oninput: (event) => funcsValidate[index](event.target.value)
-//   }))
+; [inputName, inputCity, inputTel]
+  .map((item, index) => Object.assign(item, {
+    oninput: (event) => funcsValidate[index](event.target.value)
+  }))
   //End Check form volunteer
 
 //Init map
