@@ -82,6 +82,12 @@ input.form-volunteer__input {
   box-sizing: border-box;
   display: block;
 }
+.form-volunteer__input {
+  background-position: 2%;
+}
+.form-volunteer__input:focus-visible {
+  background-position: 2%;
+}
 /*FORM after sendin----------------------------------------*/
 .form-volunteer {
   /*display: none;*/
