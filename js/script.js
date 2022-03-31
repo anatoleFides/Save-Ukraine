@@ -281,31 +281,64 @@ const nameRule = /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15}){0,1}$|^
 const cityRule = /^[A-Za-z]{2,150}$/
 const telephoneRule = /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
 
+const formVolunteer = document.querySelector('.form-volunteer')
 const inputName = document.getElementById('input-name')
 const inputCity = document.getElementById('input-city')
 const inputTel = document.getElementById('input-tel')
 const btnBecomeVolunteer = document.getElementById('volunter-btn')
 
-const validateName = (value) => {
-  const result = Boolean(value.match(nameRule))
+// const fields = formVolunteer.querySelectorAll('.field-input')
 
-  console.log(result)
+formVolunteer.addEventListener('submit', function (event) {
+  event.preventDefault()
+  console.log('clicked on validate')
+
+  removeErrorMessage()
+
+})
+
+const removeErrorMessage = () => {
+  const errors = document.querySelectorAll('.input-text__error')
+
+  for (let item of errors) {
+    item.innerText = ''
+  }
+}
+
+//Chech field input
+const checkFieldsPresence = (itemInput) => {
+  (!itemInput.value) && Object.assign(itemInput.nextElementSibling, {
+      innerText: 'Не може бути порожнім'
+    })
+}
+
+const validateName = (itemInput) => {
+  const result = Boolean(itemInput.value.match(nameRule))
+
+  result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+
+  checkFieldsPresence(itemInput)
 
   inputCity.disabled = !result
 }
 
-const validateCity = (value) => {
-  const result = Boolean(value.match(inputCity))
+const validateCity = (itemInput) => {
+  const result = Boolean(itemInput.value.match(cityRule))
 
-console.log(result)
+  result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+
+  checkFieldsPresence(itemInput)
 
   inputTel.disabled = !result
 }
 
-const validateTel = (value) => {
-  const result = Boolean(value.match(telephoneRule))
+const validateTel = (itemInput) => {
 
-console.log(result)
+  const result = Boolean(itemInput.value.match(telephoneRule))
+
+  result ? removeErrorMessage() : itemInput.nextElementSibling.innerText = 'Невірний формат'
+
+  checkFieldsPresence(itemInput)
 
   btnBecomeVolunteer.disabled = !result
 }
@@ -314,7 +347,7 @@ const funcsValidate = [validateName, validateCity, validateTel]
 
 ; [inputName, inputCity, inputTel]
   .map((item, index) => Object.assign(item, {
-    oninput: (event) => funcsValidate[index](event.target.value)
+    oninput: (event) => funcsValidate[index](event.target)
   }))
   //End Check form volunteer
 
