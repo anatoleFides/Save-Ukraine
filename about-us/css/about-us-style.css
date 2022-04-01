@@ -175,7 +175,7 @@
 .responsibilities__parag {
   margin: 0 0 20px 0;
 }
-@media (min-width: 650px) {
+@media (min-width: 768px) {
   .statutory-documents__container {
     display: flex;
     flex-wrap: wrap;
@@ -184,12 +184,13 @@
     flex: 0 1 50%;
     margin: 0 0 20px 0;
     padding: 0 15px;
+    overflow: hidden;
   }
   .statutory-documents__bound {
     padding: 0 0 120% 0;
   }
 }
-@media (min-width: 850px) {
+@media (min-width: 880px) {
   .statutory-documents__image {
     flex: 0 1 33.33%;
   }
@@ -199,14 +200,29 @@
     flex: 0 1 25%;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 768px) {
   .statutory-documents__image {
-    max-height: 600px;
+    /*max-height: 600px;*/
   }
   .statutory-documents__bound {
     padding: 0 0 90% 0;
   }
+  .swiper-zoom-container>canvas, .swiper-zoom-container>img, .swiper-zoom-container>svg {
+    object-fit: cover;
+  }
+  .swiper-slide-zoomed {
+    z-index: 5;
+  }
+  .swiper-slide-zoomed.swiper-zoom-container {
+    object-fit: cover;
+  }
+    .swiper-slide-zoomed img {
+    transform: translate3d(0px, 0px, 0px) scale(4);
+  }
 }
+  .swiper-zoom-container>canvas, .swiper-zoom-container>img, .swiper-zoom-container>svg {
+    object-fit: cover;
+  }
 .statutory-documents__bound {
   position: relative;
  box-shadow: 0 0 10px #000;

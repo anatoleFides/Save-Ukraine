@@ -147,37 +147,37 @@
           <div class="statutory-documents__slider" id="documents-slider">
             <div class="swiper-wrapper statutory-documents__container">
             <div class="swiper-slide statutory-documents__image">
-              <div class="statutory-documents__bound">
+              <div class="swiper-zoom-container statutory-documents__bound">
                 <img src="image/Rectangle 38.png" alt="" class="image-responsive" loading="lazy">
                 <p class="statutory-documents__num">1</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
-              <div class="statutory-documents__bound">
+              <div class="swiper-zoom-container statutory-documents__bound">
                 <img src="image/Rectangle 38.png" alt="" class="image-responsive" loading="lazy">
                 <p class="statutory-documents__num">2</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
-              <div class="statutory-documents__bound">
+              <div class="swiper-zoom-container statutory-documents__bound">
                 <img src="image/Rectangle 38.png" alt="" class="image-responsive" loading="lazy">
                 <p class="statutory-documents__num">3</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
-              <div class="statutory-documents__bound">
+              <div class="swiper-zoom-container statutory-documents__bound">
                 <img src="image/Rectangle 38.png" alt="" class="image-responsive" loading="lazy">
                 <p class="statutory-documents__num">4</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
-              <div class="statutory-documents__bound">
+              <div class="swiper-zoom-container statutory-documents__bound">
                 <img src="image/Rectangle 38.png" alt="" class="image-responsive" loading="lazy">
                 <p class="statutory-documents__num">5</p>
               </div>
             </div>
             <div class="swiper-slide statutory-documents__image">
-              <div class="statutory-documents__bound">
+              <div class="swiper-zoom-container statutory-documents__bound">
                 <img src="image/Rectangle 38.png" alt="" class="image-responsive" loading="lazy">
                 <p class="statutory-documents__num">6</p>
               </div>
@@ -256,11 +256,21 @@
   <script>
     let currentWidth = window.innerWidth
     window.onresize = function () {
-      if (window.innerWidth <= 650 && currentWidth > 650) {
+      if (window.innerWidth <= 768 && currentWidth > 768) {
         location.reload()
-      } else if (window.innerWidth > 650 && currentWidth <= 650)
+      } else if (window.innerWidth > 768 && currentWidth <= 768)
         location.reload()
     }
+
+    // const slides = document.querySelectorAll('.statutory-documents__image')
+
+    // for (let slide of slides) {
+    //   slide.onclick = (event) => {
+    //     event.target.style = `
+    //       z-index: 5;
+    //     `
+    //   }
+    // }
   </script>
   <script src="../js/script.js"></script>
 </body>
