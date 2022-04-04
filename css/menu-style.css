@@ -17,7 +17,7 @@
   align-items: center;
   position: relative;
   z-index: 10;
-  padding: 8px 0;
+  padding: 16px 0;
 }
 .menu__list {
   display: flex;
@@ -27,11 +27,16 @@
   font-weight: 700;
 }
 .menu__item {
-  margin: 0 16px 0 0 ;
+  margin: 0 61px 0 0;
   position: relative;
 }
 .menu__item:last-child {
   margin: 0;
+}
+@media (max-width: 870px) {
+  .menu__item {
+    margin: 0 40px 0 0;
+  }
 }
 .menu__link {
   font-size: 16px;
@@ -59,7 +64,7 @@
     z-index: 7;
     align-items: start;
     justify-content: space-between;
-    padding: 145px 8px 0 8px;
+    padding: 125px 8px 0 8px;
     background: #F5F5F5;
     transition: all .8s ease;
     flex-direction: column;
@@ -74,7 +79,7 @@
     width: 95%;
     height: 1px;
     left: 2.5%;
-    top: 60px;
+    top: 52px;
     background: #FFD500;
   }
   .main-menu__body {
