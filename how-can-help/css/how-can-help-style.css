@@ -1,14 +1,19 @@
+.how-help__parag {
+  padding: 0 0 30px 0;
+}
 .how-help__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px -16px 60px -16px;
+  flex-wrap: wrap;
+  margin: 20px -16px 60px -16px;
 }
 .how-help__item {
   position: relative;
   flex: 0 1 50%;
   width: 100%;
   padding: 0 16px;
+  margin: 0 0 30px 0;
 }
 @media (max-width: 768px) {
   .how-help__body {
@@ -17,8 +22,8 @@
   .how-help__item {
     flex: 1 1 auto;
   }
-  .how-help__item:first-child {
-    margin: 0 0 24px 0;
+  .how-help__item {
+    margin: 0 0 20px 0;
   }
   .how-help__item:last-child {
     margin: 0;
@@ -41,9 +46,8 @@
 }
 .how-help__image:first-child:before {
   background: #0786A5;
-
 }
-.how-help__item:last-child .how-help__image:before {
+.how-help__item:nth-child(even) .how-help__image:before {
   background: #FFD500;
 }
 .how-help__item:hover .how-help__image:before {
@@ -56,6 +60,50 @@
     padding: 0 0 56% 0;
   }
 }
+  .how-help__text-hidden {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    padding: 0 30px 30px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+    z-index: 5;
+    display: flex;
+    align-items: flex-end;
+  }
+@media (min-width: 768px){
+  .how-help__text-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .how-help__item:hover .how-help__text-hidden {
+    visibility: visible;
+    opacity: 1;
+    transition: all .7s ease;
+  }
+  .how-help__item:nth-child(odd) .how-help__text-hidden {
+  left: -70%;
+    transition: left .5s ease;
+  }
+  .how-help__item:nth-child(odd):hover .how-help__text-hidden {
+    left: 0;
+  }
+  .how-help__item:nth-child(even) .how-help__text-hidden {
+    right: -70%;
+    transition: right .5s ease;
+  }
+  .how-help__item:nth-child(even):hover .how-help__text-hidden {
+    right: 0;
+  }
+}
+@media (max-width: 768px){
+  .how-help__text-hidden {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .how-help__row {
   position: absolute;
   width: 100%;
@@ -64,16 +112,10 @@
   top: 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 30px 32px 38px;
   color: #fff;
   z-index: 3;
-}
-@media (min-width: 768px) {
-  .how-help__item:last-child .how-help__subtitle,
-  .how-help__item:last-child .how-help__link{
-    align-self: flex-start;
-  }
 }
 .how-help__subtitle {
   max-width: 290px;
@@ -90,7 +132,7 @@
   }
 }
 .how-help__link {
-  align-self: flex-end;
+  align-self: flex-start;
   color: #fff;
   font-size: 24px;
   line-height: 40px;
