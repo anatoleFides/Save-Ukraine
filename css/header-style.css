@@ -87,16 +87,16 @@
   max-width: 100%;
   object-fit: cover;
 }
-@media (max-width: 550px) {
+/*@media (max-width: 550px) {
   .logo__link img {
     max-width: 80%;
   }
-}
+}*/
 /*Contacs + menu active*/
 @media (max-width: 768px) {
   .header__content.active-contacts {
     flex-wrap: wrap;
-    padding: 4px 0 0 0;
+    /*padding: 4px 0 0 0;*/
   }
   .active-contacts.content-header__contacts {
     order: 3;
@@ -191,7 +191,7 @@
   }
   #burger-menu.open {
     align-self: flex-start;
-    margin: 26px 0 0 0;
+    margin: 22px 0 0 0;
   }
   #burger-menu span {
     width: 100%;
