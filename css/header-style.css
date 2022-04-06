@@ -83,10 +83,10 @@
     padding: 4px 0 0 0;
   }
 }*/
-.logo__link img {
-  max-width: 100%;
+/*.logo__link img {
+  max-width: 210px;
   object-fit: cover;
-}
+}*/
 /*@media (max-width: 550px) {
   .logo__link img {
     max-width: 80%;
