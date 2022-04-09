@@ -1,4 +1,4 @@
-/*ABOUT US-------------------------------------------------------------*/
+/*ABOUT FOND------------------------------------------------------------*/
 .about-fond__text {
   position: relative;
   background: #FFD500;
@@ -39,6 +39,9 @@
 }
 .about-fond__parag:last-child {
   margin: 0;
+}
+.about-fond__parag span {
+  font-style: italic;
 }
 .about-fond__content {
   display: flex;
