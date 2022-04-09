@@ -1,5 +1,3 @@
-
-
 .about-founder__row {
   display: inline-flex;
   justify-content: space-between;
@@ -19,11 +17,6 @@
   }
   .about-founder__row {
     margin: 0 0 35px 0;
-  }
-}
-@media (min-width: 768px) and (max-width: 950px) {
-  .about-founder__subtitle {
-
   }
 }
 @media (max-width: 768px) {
