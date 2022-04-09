@@ -71,6 +71,20 @@
   transition: all .6s ease;
   color: #fff;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .slider-main__buttons {
+    align-items: center;
+    flex-direction: column;
+  }
+  .slider-main__button:first-child {
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .slider-main__buttons {
+    align-self: center;
+  }
+}
 @media (max-width: 450px) {
   .slider-main__buttons {
     align-items: center;
@@ -104,7 +118,6 @@
 @media (max-width: 768px) {
   .slider-main-ukrain {
     width: 100%;
-    order: 1;
     margin: 0;
   }
 }

@@ -8,6 +8,16 @@ document.getElementById('burger-menu').onclick = (event) => {
   document.getElementsByClassName('content-header__contacts')[0].classList.toggle('active-contacts')
 }
 
+//Reloadin width = 768px
+let currentWidth = window.innerWidth
+
+window.onresize = function () {
+  if (window.innerWidth <= 768 && currentWidth > 768) {
+    location.reload()
+  } else if (window.innerWidth > 768 && currentWidth <= 768)
+    location.reload()
+}
+
 //Scroll+fixed menu
 const nav = document.getElementById('menu-stiky')
 
@@ -189,18 +199,13 @@ const showTabPage = (propActive) => {
 
 //Copy text
 const textCopy = document.querySelector('.copy-text')
-const numberPayPal = document.getElementById('paypal-number')
 
-textCopy.onclick= (event) => {
-  copyText(numberPayPal)
-}
-
-const copyText = (elem) => {
+const copyText = (id) => {
   const inputText = document.body
     .appendChild( document.createElement('input'))
 
   Object.assign(inputText, {
-    value: elem.textContent
+    value: document.getElementById(id).textContent
   }).select()
 
   document.execCommand("copy")
