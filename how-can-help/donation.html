@@ -98,33 +98,35 @@
           </ul>
           <ul class="tabs-donation__pages">
             <li class="tabs-donation__page tabs-active" id="page1">
-              <h3 class="tabs-donation__title">Зробити пожертвування</h3>
-              <div class="tabs-donation__paysystems pay-systems">
-                <div class="pay-systems__item">
-                  <img src="image/visa-mastercard.png" alt="visa mastercard"> <!-- class="image-responsive" -->
-                </div>
-                <div class="pay-systems__item">
-                  <img src="image/Masterpass-logo.jpg" alt="masterpass">
-                </div>
-                <div class="pay-systems__item">
-                  <img src="image/privat24.jpg" alt="privat24">
-                </div>
-                <div class="pay-systems__item">
-                  <img src="image/visa-checkout.jpg" alt="visa checkout">
-                </div>
-                <div class="pay-systems__item">
-                  <img src="image/apple-pay.png" alt="apple pay">
-                </div>
-                <div class="pay-systems__item">
-                  <img src="image/google-pay.jpg" alt="google pay">
-                </div>
-              </div>
-              <div class="tabs-donate__row">
-                <div class="tabs-donation__qr">
+              <div class="tabs-donation__card card-donate">
+                <div class="card-donate__qr">
                   <img src="https://wayforpay.com/qr/img?token=bbc7c9cd98eab&type=b&size=160" alt="QR-код">
                 </div>
-                <div class="tabs-donation__btn">
-                  <button type="button" class="form__btn _btn" onclick="runWfpWdgt('https://secure.wayforpay.com/button/bbc7c9cd98eab')" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">ДОПОМОГТИ</button>
+                <div class="card-donate__content">
+                  <h3 class="tabs-donation__title">Зробити пожертвування:</h3>
+                  <form action="#">
+                    <select class="card-donate__select">
+                      <option value="aid all">Допомогти всім</option>
+                      <option value="aid children">Допомогти дітям</option>
+                      <option value="aid animals">Допомогти тваринам</option>
+                      <option value="aid Kharkiv">Відновлення города-героя Харкова</option>
+                      <option value="aid aged">Допомога дорослим та людям похилого віку</option>
+                    </select>
+                  </form>
+                  <div class="card-donate__row">
+                    <button type="button" class="card-donate__btn _btn">Пожертвувати</button>
+                    <div class="card-donate__paysystems pay-systems">
+                      <div class="pay-systems__item">
+                        <img src="image/visa.png" alt="visa">
+                      </div>
+                      <div class="pay-systems__item">
+                        <img src="image/mastercard.png" alt="mastercard">
+                      </div>
+                      <div class="pay-systems__item">
+                        <img src="image/privat24.png" alt="privat24">
+                      </div>
+                    </div>
+                  </div>
                   <p>* обов'язково заповныть поле "Коментарі"</p>
                 </div>
               </div>
@@ -221,8 +223,5 @@
   </div>
   <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
   <script src="../js/script.js"></script>
-  <script type="text/javascript" id="widget-wfp-script" src="https://secure.wayforpay.com/server/pay-widget.js?ref=button"></script>
-  <script type="text/javascript">function runWfpWdgt(url){var wayforpay=new Wayforpay();wayforpay.invoice(url);}</script>
-
 </body>
 </html>
