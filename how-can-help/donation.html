@@ -10,7 +10,15 @@
   <link rel="shortcut icon" href="../image/favicon-heart.ico" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </head>
 <body>
   <div class="wrapper" id="donation">
@@ -92,7 +100,7 @@
         <h2 class="donation__subtitle subtitle" id="donation-now">Підтримай Україну</h2>
         <div class="donation__tabs tabs-donation">
           <ul class="tabs-donation__navigation nav-tabs">
-            <li class="nav-tabs__item tabs-active" data-tab_id="page1">Оплатити карткою або інші засоби оплати</li>
+            <li class="nav-tabs__item tabs-active" data-tab_id="page1">Оплатити карткою</li>
             <li class="nav-tabs__item" data-tab_id="page2">Оплатити за реквізитами</li>
             <li class="nav-tabs__item" data-tab_id="page3">Оплатити Pay Pal</li>
           </ul>
@@ -105,7 +113,7 @@
                 <div class="card-donate__content">
                   <h3 class="tabs-donation__title">Зробити пожертвування:</h3>
                   <form action="#">
-                    <select class="card-donate__select">
+                    <select class="js-example-basic-single card-donate__select" name="state">
                       <option value="aid all">Допомогти всім</option>
                       <option value="aid children">Допомогти дітям</option>
                       <option value="aid animals">Допомогти тваринам</option>
@@ -222,6 +230,11 @@
     </footer>
   </div>
   <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
+  <script>
+    $(document).ready(function() {
+      $('.js-example-basic-single').select2();
+    });
+  </script>
   <script src="../js/script.js"></script>
 </body>
 </html>
