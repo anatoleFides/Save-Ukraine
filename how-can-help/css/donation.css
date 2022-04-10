@@ -104,10 +104,20 @@
   .card-donate {
     flex-direction: column;
   }
-  .card-donate__qr {
+  .card-donate__qrs {
     order: 2;
     margin: 16px 0 0 0;
   }
+}
+.card-donate__qr {
+  display: none;
+}
+.card-donate__qr img {
+  max-width: 200px;
+  object-fit: cover;
+}
+.card-donate__qr.qr-active {
+  display: block;
 }
 .card-donate__content {
   flex: 0 0 50%;

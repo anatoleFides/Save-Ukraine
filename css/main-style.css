@@ -22,6 +22,7 @@
   height: 742px;
   background: url(../image/main-ODA.png) center / cover;
   position: relative;
+  background-attachment: fixed;
 }
 .oda__content {
   position: absolute;
