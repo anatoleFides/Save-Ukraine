@@ -3,6 +3,12 @@
   justify-content: space-between;
   margin: 20px 0 90px;
 }
+@media (max-width: 768px) {
+  .not-found404__body {
+    flex-direction: column;
+    margin: 0 0 30px 0;
+  }
+}
 .not-found404__content {
   flex: 1 1 auto;
   display: flex;
@@ -31,6 +37,26 @@
   line-height: 120px;
   padding: 20px 0;
 }
+@media (max-width: 768px) {
+  .not-found404__content {
+    align-items: center;
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  .not-found404__parag:nth-child(1) {
+    padding: 30px 0 0 0;
+  }
+  .not-found404__parag:nth-child(3) {
+    padding:0 0 20px 0;
+  }
+  .not-found404__parag:nth-child(6) {
+    padding: 0 0 24px 0;
+  }
+  .not-found404n__title {
+   padding: 0;
+  }
+}
+
 .not-found404__content a {
   display: inline-block;
 }
