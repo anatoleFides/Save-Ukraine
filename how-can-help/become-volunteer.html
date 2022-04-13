@@ -10,7 +10,14 @@
   <link rel="shortcut icon" href="../image/favicon-heart.ico" type="image/x-icon">
 
   <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
   <div class="wrapper" id="become-volunteer">
@@ -31,10 +38,25 @@
                 <img src="../image/logo.png" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
               </a>
             </div>
-            <div class="content-header__language language">
-              <a href="#!" class="language__link"></a>
-              <p class="language__text">English version</p>
-              <p class="language__text_short">En</p>
+            <div class="content-header__language">
+              <div class="icons-language">
+                <div class="icon-language img-active" id="flag-ukr">
+                  <img src="../image/ukraine.png" alt="український прапор">
+                </div>
+                <div class="icon-language" id="flag-en">
+                  <img src="../image/england.png" alt="england flag">
+                </div>
+                <div class="icon-language" id="flag-ru">
+                  <img src="../image/ru-ship.jpg" alt="русский тонущий корабль">
+                </div>
+              </div>
+              <form action="#" id="form-language">
+                <select class="js-example-basic-single language-select" name="state">
+                  <option value="ukr language" data-option_flag="flag-ukr" class="language-option">Укр</option>
+                  <option value="en language" data-option_flag="flag-en" class="language-option">En</option>
+                  <option value="ru language" data-option_flag="flag-ru" class="language-option">Ру</option>
+                </select>
+              </form>
             </div>
           </div>
           <button type="button" id="burger-menu">
@@ -106,7 +128,7 @@
             <form action="#" class="volunteer-form__form form-volunteer">
               <div class="form-volunteer__item">
                 <div class="form-volunteer__title">Ваші ПІБ</div>
-                <input type="text" class="input-text__custom form-volunteer__input field-input" id="input-name">
+                <input type="text" class="input-text__custom form-volunteer__input field-input" placeholder="ПІБ" id="input-name">
                 <p class="input-text__error"></p>
               </div>
               <div class="form-volunteer__item">
@@ -123,8 +145,8 @@
                 </div>
               </div>
               <div class="form-volunteer__item">
-                <div class="form-volunteer__title">Місто</div>
-                <input type="text" class="input-text__custom form-volunteer__input field-input" id="input-city">
+                <div class="form-volunteer__title">Населенний пункт</div>
+                <input type="text" class="input-text__custom form-volunteer__input field-input" placeholder="Населений пункт" id="input-city">
                 <p class="input-text__error"></p>
               </div>
               <div class="form-volunteer__item">
@@ -132,7 +154,7 @@
                 <input type="tel" class="input-text__custom form-volunteer__input field-input" placeholder="(0XX)XXX XX XX" id="input-tel">
                 <p class="input-text__error"></p>
               </div>
-              <button type="submit" class="form__btn _btn" id="volunter-btn" disabled>Стати волонтером</button>
+              <button type="submit" class="form__btn _btn" id="volunter-btn">Стати волонтером</button>
             </form>
             <div class="volunteer-form__sending sending-form">
               <div class="sending-form__content">
@@ -213,17 +235,6 @@
   <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
   <script src="../js/script.js"></script>
   <script>
-    // const nameRule = /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15}){0,1}$|^[A-Z]{0,1}[a-z]{1,15}( [A-Z]{0,1}[a-z]{1,15}){0,1}$/
-// const cityRule = /^[A-Za-z]{2,150}$/
-
-const removeErrorMessage = () => {
-  const errors = document.querySelectorAll('.input-text__error')
-
-  for (let item of errors) {
-    item.innerText = ''
-  }
-}
-
 //Chech field input
 const checkFieldsPresence = (itemInput) => {
   (!itemInput.value) && Object.assign(itemInput.nextElementSibling, {
@@ -241,45 +252,14 @@ const showError = (result, itemInput) => {
     })
 }
 
-// const validateName = (itemInput) => {
-//   const nameRule = /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15})( [А-Я]{0,1}[а-я]{1,15}){0,1}$/
-
-//   const result = Boolean(itemInput.value.match(nameRule))
-
-//   showError(result, itemInput)
-
-//   checkFieldsPresence(itemInput)
-// }
-
-// const validateCity = (itemInput) => {
-//   const cityRule = /^[А-Яа-я]{2,15}$/
-
-//   const result = Boolean(itemInput.value.match(cityRule))
-
-//   showError(result, itemInput)
-
-//   checkFieldsPresence(itemInput)
-// }
-
-// const validateTel = (itemInput) => {
-//   const telephoneRule = /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
-
-//   const result = Boolean(itemInput.value.match(telephoneRule))
-
-//   showError(result, itemInput)
-
-//   checkFieldsPresence(itemInput)
-// }
 const inputRules = [
-  /^[А-Я]{0,1}[а-я]{1,15}( [А-Я]{0,1}[а-я]{1,15})( [А-Я]{0,1}[а-я]{1,15}){0,1}$/,
-  /^[А-Яа-я]{2,15}$/,
-  /^\(?([0]{1}[3-9]{2})\)?[- ]?([0-9]{3})[- ]?([0-9]{2})[- ]?([0-9]{2})$/
+  /^([А-ЯЁ][а-яё]{2,8}([-][А-ЯЁ][а-яё]{1,8})?(\s[А-ЯЁ][а-яё]{1,8})(\s[А-ЯЁ][а-яё]{2,8})?|[A-Z][a-z]{2,8}([-,'][A-Z][a-z]{2,8})?(\s[A-Z][a-z]{2,8})(\s[A-Z][a-z]{2,8})?|[А-ЯІЇҐЄ][а-яіїґє\']{2,10}([-][А-ЯІЇҐЄ][а-яіїґє\']{2,10})?(\s[А-ЯІЇҐЄ][а-яіїґє\']{2,10})(\s[А-ЯІЇҐЄ][а-яіїґє\']{2,10})?)$/,
+  /^([А-ЯЁ][а-яё]{2,10}([-][А-ЯЁ][а-яё]{2,10})?|[A-Z][a-z]{2,10}([-][A-Z][a-z]{2,10})?|[А-ЯІЇҐЄ][а-яіїґє\']{2,10}([-][А-ЯІЇҐЄ][а-яіїґє\']{2,10})?)$/,
+  /^\(?([0-9]{3})\)?[-\s]?([0-9]{3})[-\s]?([0-9]{2})[-\s]?([0-9]{2})$/
+
 ]
 
-const inputName = document.getElementById('input-name')
-const inputCity = document.getElementById('input-city')
-const inputTel = document.getElementById('input-tel')
-const btnBecomeVolunteer = document.getElementById('volunter-btn')
+//   /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/
 
 const validateInputValue = (itemInput, regex) => {
   const result = Boolean(itemInput.value.match(regex))
@@ -287,31 +267,24 @@ const validateInputValue = (itemInput, regex) => {
   showError(result, itemInput)
 
   checkFieldsPresence(itemInput)
-
-  Object.assign(btnBecomeVolunteer, {
-    disabled: !result
-  })
 }
-
-// const funcsValidate = [validateName, validateCity, validateTel]
-
-; [inputName, inputCity, inputTel]
-  .map((item, index) => Object.assign(item, {
-    oninput: (event) => validateInputValue(event.target, inputRules[index])
-  }))
 
 const formVolunteer = document.querySelector('.form-volunteer')
 const inputs = document.querySelectorAll('.field-input')
 
+inputs.forEach((input, index) => Object.assign(input, {
+    oninput: (event) => validateInputValue(event.target, inputRules[index])
+  }))
+
 formVolunteer.addEventListener('submit', function (event) {
   event.preventDefault()
-  console.log('clicked on validate')
 
-  removeErrorMessage()
+  inputs.forEach((input, index) => {
+    validateInputValue(input, inputRules[index])
+    checkFieldsPresence(input)
+  })
 
-  for (let itemInput of inputs) {
-    checkFieldsPresence(itemInput)
-  }
+console.log('clicked on validate')
 })
   //End Check form volunteer
   </script>

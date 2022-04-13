@@ -39,10 +39,25 @@
                 <img src="../image/logo.png" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
               </a>
             </div>
-            <div class="content-header__language language">
-              <a href="#!" class="language__link"></a>
-              <p class="language__text">English version</p>
-              <p class="language__text_short">En</p>
+            <div class="content-header__language">
+              <div class="icons-language">
+                <div class="icon-language img-active" id="flag-ukr">
+                  <img src="../image/ukraine.png" alt="український прапор">
+                </div>
+                <div class="icon-language" id="flag-en">
+                  <img src="../image/england.png" alt="england flag">
+                </div>
+                <div class="icon-language" id="flag-ru">
+                  <img src="../image/ru-ship.jpg" alt="русский тонущий корабль">
+                </div>
+              </div>
+              <form action="#" id="form-language">
+                <select class="js-example-basic-single language-select" name="state">
+                  <option value="ukr language" data-option_flag="flag-ukr" class="language-option">Укр</option>
+                  <option value="en language" data-option_flag="flag-en" class="language-option">En</option>
+                  <option value="ru language" data-option_flag="flag-ru" class="language-option">Ру</option>
+                </select>
+              </form>
             </div>
           </div>
           <button type="button" id="burger-menu">
@@ -108,7 +123,7 @@
             <li class="tabs-donation__page tabs-active" id="page1">
               <div class="tabs-donation__card card-donate">
                 <div class="card-donate__qrs">
-                  <div class="card-donate__qr qr-active" id="aid-all">
+                  <div class="card-donate__qr img-active" id="aid-all">
                     <img src="image/qr-code/qr-all.png" alt="QR-код">
                   </div>
                   <div class="card-donate__qr" id="aid-children">
@@ -126,7 +141,7 @@
                 </div>
                 <div class="card-donate__content">
                   <h3 class="tabs-donation__title">Зробити пожертвування:</h3>
-                  <form action="#">
+                  <form action="#" id="form-card">
                     <select class="js-example-basic-single card-donate__select" name="state">
                       <option value="aid all" data-option_id="aid-all" class="card-donate__option">Допомогти всім</option>
                       <option value="aid children" data-option_id="aid-children" class="card-donate__option">Допомогти дітям</option>
@@ -134,21 +149,21 @@
                       <option value="aid kharkiv" data-option_id="aid-kharkiv" class="card-donate__option">Відновлення города-героя Харкова</option>
                       <option value="aid aged" data-option_id="aid-aged" class="card-donate__option">Допомога дорослим та людям похилого віку</option>
                     </select>
-                  </form>
-                  <div class="card-donate__row">
-                    <button type="button" class="card-donate__btn _btn">Пожертвувати</button>
-                    <div class="card-donate__paysystems pay-systems">
-                      <div class="pay-systems__item">
-                        <img src="image/visa.png" alt="visa">
-                      </div>
-                      <div class="pay-systems__item">
-                        <img src="image/mastercard.png" alt="mastercard">
-                      </div>
-                      <div class="pay-systems__item">
-                        <img src="image/privat24.png" alt="privat24">
+                    <div class="card-donate__row">
+                      <button type="button" class="card-donate__btn _btn">Пожертвувати</button>
+                      <div class="card-donate__paysystems pay-systems">
+                        <div class="pay-systems__item">
+                          <img src="image/visa.png" alt="visa">
+                        </div>
+                        <div class="pay-systems__item">
+                          <img src="image/mastercard.png" alt="mastercard">
+                        </div>
+                        <div class="pay-systems__item">
+                          <img src="image/privat24.png" alt="privat24">
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </form>
                   <p>* обов'язково заповныть поле "Коментарі"</p>
                 </div>
               </div>
@@ -246,25 +261,21 @@
   <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
   <script>
     $(document).ready(function() {
-      $('.js-example-basic-single').select2();
+      $('.language-select').select2({
+        minimumResultsForSearch : Infinity,
+        width: 'style',
+        selectOnClose: true
+      });
+      $('.card-donate__select').select2();
     });
 
-    //Change QR-code
-    const showQrcode = (id) => {
-      const listQrcode = document.querySelectorAll('.card-donate__qr')
-
-      for (let item of listQrcode) {
-        item.classList.remove('qr-active')
-      }
-      document.getElementById(`${id}`).classList.add('qr-active')
-    }
-
-    const options = document.querySelectorAll('.card-donate__option')
+    const listQrcode = document.querySelectorAll('.card-donate__qr')
+    const optionsCard = document.querySelectorAll('.card-donate__option')
 
     Object.assign(document.querySelector('.card-donate__select'), {
       onchange: event => {
-        for (let option of options) {
-          option.selected && showQrcode(option.dataset.option_id)
+        for (let option of optionsCard) {
+          option.selected && showImgWhenSelected(option.dataset.option_id, listQrcode)
         }
       }
     })

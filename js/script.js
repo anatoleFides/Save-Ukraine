@@ -29,6 +29,34 @@ function checkMarginToTop () {
     : nav.classList.remove('menu-sticky')
 }
 
+//Change img language
+$(document).ready(function() {
+  $('.language-select').select2({
+    minimumResultsForSearch : Infinity,
+    width: 'style',
+    selectOnClose: true
+  });
+});
+
+const showImgWhenSelected = (id, collection) => {
+  for (let item of collection) {
+    item.classList.remove('img-active')
+  }
+
+  document.getElementById(`${id}`).classList.add('img-active')
+}
+
+const listImgFlag = document.querySelectorAll('.icon-language')
+const optionsLanguage = document.querySelectorAll('.language-option')
+
+Object.assign(document.querySelector('.language-select'), {
+  onchange: event => {
+    for (let option of optionsLanguage) {
+      option.selected && showImgWhenSelected(option.dataset.option_flag, listImgFlag)
+    }
+  }
+}) //End Change img language
+
 //Scroll to top
 const scrollElem = document.getElementById('scrollToTop')
 
@@ -75,7 +103,6 @@ if (document.querySelector('.slider-main-ukrain')){
     loop: true,
     loopAdditionalSlides: 5,
     preloadImages: false,
-    // parallax: true,
     autoplay: true,
     pagination: {
       el: '.swiper-pagination'
@@ -93,7 +120,6 @@ if (document.querySelector('.slider-main-building')){
     observer: true,
     observerParents: true,
     slidesPerView: 1,
-    // spaceBetween: 32,
     watchOverflow: true,
     speed: 1200,
     loop: true,
@@ -109,7 +135,6 @@ if (document.querySelector('.slider-main-building')){
 //Report page slider big-small
 if (document.querySelector('.swiper-report__small')) {
   const swiperReportSmall = new Swiper(".swiper-report__small", {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 2,
     breakpoints: {
@@ -211,7 +236,7 @@ const copyText = (id) => {
   document.execCommand("copy")
 
   inputText.remove()
-}
+} // End copy text
 
 //Init map
 function initMap () {

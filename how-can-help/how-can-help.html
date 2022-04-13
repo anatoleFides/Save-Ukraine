@@ -10,7 +10,14 @@
   <link rel="shortcut icon" href="../image/favicon-heart.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
   <div class="wrapper" id="how-can-help">
@@ -31,10 +38,25 @@
                 <img src="../image/logo.png" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
               </a>
             </div>
-            <div class="content-header__language language">
-              <a href="#!" class="language__link"></a>
-              <p class="language__text">English version</p>
-              <p class="language__text_short">En</p>
+            <div class="content-header__language">
+              <div class="icons-language">
+                <div class="icon-language img-active" id="flag-ukr">
+                  <img src="../image/ukraine.png" alt="український прапор">
+                </div>
+                <div class="icon-language" id="flag-en">
+                  <img src="../image/england.png" alt="england flag">
+                </div>
+                <div class="icon-language" id="flag-ru">
+                  <img src="../image/ru-ship.jpg" alt="русский тонущий корабль">
+                </div>
+              </div>
+              <form action="#" id="form-language">
+                <select class="js-example-basic-single language-select" name="state">
+                  <option value="ukr language" data-option_flag="flag-ukr" class="language-option">Укр</option>
+                  <option value="en language" data-option_flag="flag-en" class="language-option">En</option>
+                  <option value="ru language" data-option_flag="flag-ru" class="language-option">Ру</option>
+                </select>
+              </form>
             </div>
           </div>
           <button type="button" id="burger-menu">
@@ -94,7 +116,6 @@
             <div class="how-help__row">
               <h2 class="how-help__subtitle">Допомогти дітям</h2>
               <a href="donation.html#donation" class="how-help__link icon-arrow-right2"></a>
-              <!-- <a href="https://secure.wayforpay.com/payment/s22ec69b4128f" class="how-help__link icon-arrow-right2"></a> -->
             </div>
             <p class="how-help__text-hidden">На що спрямовуються кошти: медикаменти і медицинське обладнання для дітей та лікарень; продукти харчування, одяг і предмети першої необхідності</p>
           </div> <!-- end item -->
@@ -105,7 +126,6 @@
             <div class="how-help__row">
               <h2 class="how-help__subtitle">Допомогти тваринам</h2>
               <a href="donation.html#donation" class="how-help__link icon-arrow-right2"></a>
-              <!-- <a href="https://secure.wayforpay.com/payment/s32b628afc8e9" class="how-help__link icon-arrow-right2"></a> -->
             </div>
             <p class="how-help__text-hidden">Допомога включає: лікування тварин, закупівля корму для людей, що притулили кинутих тварин внаслідок евакуації або смерті господарів, утримання в притулку; відновлення зруйнованих притулків; будівництво нових притулків для тварин.</p>
           </div> <!-- end item -->
@@ -116,7 +136,6 @@
             <div class="how-help__row">
               <h2 class="how-help__subtitle">Відновлення города-героя Харкова</h2>
               <a href="donation.html#donation" class="how-help__link icon-arrow-right2"></a>
-              <!-- <a href="https://secure.wayforpay.com/payment/s3a4c4e8b66a3" class="how-help__link icon-arrow-right2"></a> -->
             </div>
             <p class="how-help__text-hidden">Для відновлення міста фонд готовий приймати на себе будь-які логістичні та митні питання щодо доставки необхідної техніки, матеріалів та обладнання для відновлення розчищення наслідків від військових дій (посилання на галерею руйнувань Харкова), що передаються до фонду.</p>
           </div> <!-- end item -->
@@ -127,7 +146,6 @@
             <div class="how-help__row">
               <h2 class="how-help__subtitle">Допомога дорослим та людям похилого віку</h2>
               <a href="donation.html#donation" class="how-help__link icon-arrow-right2"></a>
-              <!-- <a href="https://secure.wayforpay.com/payment/s75b9292b25d3" class="how-help__link icon-arrow-right2"></a> -->
             </div>
             <p class="how-help__text-hidden">Що включає допомога: медикаменти і медицинське обладнання для людей похилого віку та лікарень; продукти харчування, одяг и предмети першої необхідності.</p>
           </div> <!-- end item -->
@@ -138,7 +156,6 @@
             <div class="how-help__row">
               <h2 class="how-help__subtitle">Допомогти всім</h2>
               <a href="donation.html#donation" class="how-help__link icon-arrow-right2"></a>
-              <!-- <a href="https://secure.wayforpay.com/payment/sd948bd9510bf" class="how-help__link icon-arrow-right2"></a> -->
             </div>
             <p class="how-help__text-hidden">Кошти будуть розподілені між проєктами на розсуд Фонду.</p>
           </div> <!-- end item -->

@@ -8,11 +8,20 @@
   <link rel="canonical" href="#"/>
 
   <link rel="shortcut icon" href="../image/favicon-heart.ico" type="image/x-icon">
-  
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+
   <link rel="stylesheet" href="css/style.css">
+
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
   <div class="wrapper" id="about-us">
@@ -33,10 +42,25 @@
                 <img src="../image/logo.png" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
               </a>
             </div>
-            <div class="content-header__language language">
-              <a href="#!" class="language__link"></a>
-              <p class="language__text">English version</p>
-              <p class="language__text_short">En</p>
+            <div class="content-header__language">
+              <div class="icons-language">
+                <div class="icon-language img-active" id="flag-ukr">
+                  <img src="../image/ukraine.png" alt="український прапор">
+                </div>
+                <div class="icon-language" id="flag-en">
+                  <img src="../image/england.png" alt="england flag">
+                </div>
+                <div class="icon-language" id="flag-ru">
+                  <img src="../image/ru-ship.jpg" alt="русский тонущий корабль">
+                </div>
+              </div>
+              <form action="#" id="form-language">
+                <select class="js-example-basic-single language-select" name="state">
+                  <option value="ukr language" data-option_flag="flag-ukr" class="language-option">Укр</option>
+                  <option value="en language" data-option_flag="flag-en" class="language-option">En</option>
+                  <option value="ru language" data-option_flag="flag-ru" class="language-option">Ру</option>
+                </select>
+              </form>
             </div>
           </div>
           <button type="button" id="burger-menu">
