@@ -163,6 +163,7 @@ if (document.querySelector('.swiper-report__small')) {
     },
   })
 }
+
 //Page about-us slider documents
 if (document.querySelector('.statutory-documents__slider')) {
   let isMobile = {
@@ -191,6 +192,26 @@ if (document.querySelector('.statutory-documents__slider')) {
     })
   }
 } //End Page about-us slider documents
+
+//Slide Kharkiv
+if (document.querySelector('.swiper-kharkiv')) {
+  const swiperImgKharkiv = new Swiper('.swiper-kharkiv', {
+    effect: "coverflow",
+    loop: true,
+    autoplay: true,
+    speed: 800,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    }
+  })
+}
 
 //Page donation change Tab
 const navTabLinks = document.querySelectorAll('.nav-tabs__item')
