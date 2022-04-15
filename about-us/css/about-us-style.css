@@ -8,67 +8,13 @@
   position: relative;
 }
 .about-us__image_big {
-  margin: 0 8% 50px;
-  padding: 0 0 48% 0;
-}
-.about-us__image_midle {
-  margin: 50px 17%;
+  margin: 50px 8%;
   padding: 0 0 48% 0;
 }
 @media (max-width: 768px) {
   .about-us__image_big {
-    margin: 0 0 20px 0;
-    padding: 0 0 63% 0;
-}
-  .about-us__image_midle {
     margin: 20px 0;
-    padding: 0 0 65% 0;
-  }
-}
-.about-us__slogan {
-  font-style: italic;
-  font-size: 18px;
-  line-height: 25px;
-  color: #0786A5;
-  padding: 50px 15%;
-  position: relative;
-}
-.about-us__slogan:before,
-.about-us__slogan:after {
-  content: '';
-  position: absolute;
-  width: 26px;
-  height: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: url('../image/quotes.svg');
-}
-.about-us__slogan:before {
-  left: 10%;
-}
-.about-us__slogan:after {
-  right: 10%;
-  transform: translateY(-50%) rotate(-180deg);
-}
-@media (max-width: 768px) {
-  .about-us__slogan {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 25px 10%;
-  }
-  .about-us__slogan:before {
-    left: 1.5%;
-  }
-  .about-us__slogan:after {
-    right: 1.5%;
-  }
-}
-@media (max-width: 450px) {
-  .about-us__slogan:before {
-    left: 0;
-  }
-  .about-us__slogan:after {
-    right: 0;
+    padding: 0 0 63% 0;
   }
 }
 .parag-link{
@@ -79,7 +25,6 @@
 .purpose__title{
   padding: 24px 0 0 0;
 }
-
 .purpose__container {
   display: flex;
   justify-content: space-between;
@@ -91,7 +36,7 @@
 .purpose__image {
   flex: 0 0 33%;
   position: relative;
-  padding: 0 0 72% 0;
+  padding: 0 0 45% 0;
 }
 @media (max-width: 550px) {
   .purpose__container {
@@ -147,7 +92,7 @@
 }
 .responsibilities__image {
   position: relative;
-  padding: 0 0 44% 0;
+  padding: 0 0 40% 0;
   flex: 0 0 60%;
 }
 @media (max-width: 768px) {
