@@ -152,7 +152,7 @@ if (document.querySelector('.swiper-report__small')) {
     watchSlidesProgress: true,
       })
   const swiperReportBig = new Swiper('.swiper-report__big', {
-    loop: true,
+    // loop: true,
     spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-arrow__next",
