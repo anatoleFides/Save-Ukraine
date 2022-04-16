@@ -140,11 +140,6 @@
   position: relative;
   padding: 0 0 68% 0;
 }
-
-.slide-main-ukrain img {
-  /*max-width: 100%;*/
-  object-fit: cover;
-}
 .swiper-pagination.slider-dots-ukrain.swiper-pagination-bullets {
   bottom: 0;
   left: -50px;

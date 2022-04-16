@@ -107,7 +107,7 @@
     visibility: visible;
     opacity: 1;
     left: 0;
-        font-size: 18px;
+    font-size: 18px;
     line-height: 25px;
   }
   .how-help__item:nth-child(even) {

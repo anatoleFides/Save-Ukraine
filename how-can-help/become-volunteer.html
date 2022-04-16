@@ -165,7 +165,7 @@
                 <p class="sending-form__text">Дякуємо! Ваша анкета прийнята.</p>
                 <p class="sending-form__text">Незабаром ми зв’яжемось з Вами.</p>
               </div>
-              <a href="#!" class="sending-form__link">Заповнити анкету ще раз</a>
+              <p class="sending-form__link">Заповнити анкету ще раз</p>
             </div>
           </div>
         </div>
@@ -239,58 +239,62 @@
   <a class="icon-arrow-right2" href="#" id="scrollToTop"></a>
   <script src="../js/script.js"></script>
   <script>
+    //Show form
+    const sendingForm = document.querySelector('.sending-form')
+    sendingForm.onclick = (event) => {
+      sendingForm.classList.remove('form-sent')
+
+      document.querySelector('.form-volunteer').classList.remove('form-hidden')
+    }
+
 //Chech field input
-const checkFieldsPresence = (itemInput) => {
-  (!itemInput.value) && Object.assign(itemInput.nextElementSibling, {
-      innerText: 'Не може бути порожнім'
-    })
-}
+    const checkFieldsPresence = (itemInput) => {
+      (!itemInput.value) && Object.assign(itemInput.nextElementSibling, {
+        innerText: 'Не може бути порожнім'
+       })
+    }
 
-const showError = (result, itemInput) => {
-  result 
-    ? Object.assign(itemInput.nextElementSibling, {
-      innerText: ''
-    }) 
-    : Object.assign(itemInput.nextElementSibling, {
-      innerText: 'Невірний формат'
-    })
-}
+    const showError = (result, itemInput) => {
+      result 
+        ? Object.assign(itemInput.nextElementSibling, {
+          innerText: ''
+        }) 
+        : Object.assign(itemInput.nextElementSibling, {
+          innerText: 'Невірний формат'
+        })
+    }
 
-const inputRules = [
-  /^([А-ЯЁ][а-яё]{2,8}([-][А-ЯЁ][а-яё]{1,8})?(\s[А-ЯЁ][а-яё]{1,8})(\s[А-ЯЁ][а-яё]{2,8})?|[A-Z][a-z]{2,8}([-,'][A-Z][a-z]{2,8})?(\s[A-Z][a-z]{2,8})(\s[A-Z][a-z]{2,8})?|[А-ЯІЇҐЄ][а-яіїґє\']{2,10}([-][А-ЯІЇҐЄ][а-яіїґє\']{2,10})?(\s[А-ЯІЇҐЄ][а-яіїґє\']{2,10})(\s[А-ЯІЇҐЄ][а-яіїґє\']{2,10})?)$/,
-  /^([А-ЯЁ][а-яё]{2,10}([-][А-ЯЁ][а-яё]{2,10})?|[A-Z][a-z]{2,10}([-][A-Z][a-z]{2,10})?|[А-ЯІЇҐЄ][а-яіїґє\']{2,10}([-][А-ЯІЇҐЄ][а-яіїґє\']{2,10})?)$/,
-  /^\(?([0-9]{3})\)?[-\s]?([0-9]{3})[-\s]?([0-9]{2})[-\s]?([0-9]{2})$/
-
-]
+    const inputRules = [
+      /^([А-ЯЁ][а-яё]{2,8}([-][А-ЯЁ][а-яё]{1,8})?(\s[А-ЯЁ][а-яё]{1,8})(\s[А-ЯЁ][а-яё]{2,8})?|[A-Z][a-z]{2,8}([-,'][A-Z][a-z]{2,8})?(\s[A-Z][a-z]{2,8})(\s[A-Z][a-z]{2,8})?|[А-ЯІЇҐЄ][а-яіїґє\']{2,10}([-][А-ЯІЇҐЄ][а-яіїґє\']{2,10})?(\s[А-ЯІЇҐЄ][а-яіїґє\']{2,10})(\s[А-ЯІЇҐЄ][а-яіїґє\']{2,10})?)$/,
+      /^([А-ЯЁ][а-яё]{2,10}([-][А-ЯЁ][а-яё]{2,10})?|[A-Z][a-z]{2,10}([-][A-Z][a-z]{2,10})?|[А-ЯІЇҐЄ][а-яіїґє\']{2,10}([-][А-ЯІЇҐЄ][а-яіїґє\']{2,10})?)$/,
+      /^\(?([0-9]{3})\)?[-\s]?([0-9]{3})[-\s]?([0-9]{2})[-\s]?([0-9]{2})$/
+    ]
 
 //   /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/
 
-const validateInputValue = (itemInput, regex) => {
-  const result = Boolean(itemInput.value.match(regex))
+    const validateInputValue = (itemInput, regex) => {
+      const result = Boolean(itemInput.value.match(regex))
 
-  showError(result, itemInput)
+      showError(result, itemInput)
 
-  checkFieldsPresence(itemInput)
-}
+      checkFieldsPresence(itemInput)
+    }
 
-const formVolunteer = document.querySelector('.form-volunteer')
-const inputs = document.querySelectorAll('.field-input')
+    const formVolunteer = document.querySelector('.form-volunteer')
+    const inputs = document.querySelectorAll('.field-input')
 
-inputs.forEach((input, index) => Object.assign(input, {
-    oninput: (event) => validateInputValue(event.target, inputRules[index])
-  }))
+    inputs.forEach((input, index) => Object.assign(input, {
+      oninput: (event) => validateInputValue(event.target, inputRules[index])
+    }))
 
-formVolunteer.addEventListener('submit', function (event) {
-  event.preventDefault()
+    formVolunteer.addEventListener('submit', function (event) {
+      event.preventDefault()
 
-  inputs.forEach((input, index) => {
-    validateInputValue(input, inputRules[index])
-    checkFieldsPresence(input)
-  })
-
-console.log('clicked on validate')
-})
-  //End Check form volunteer
+      inputs.forEach((input, index) => {
+        validateInputValue(input, inputRules[index])
+        checkFieldsPresence(input)
+      })
+    })
   </script>
 </body>
 </html>
