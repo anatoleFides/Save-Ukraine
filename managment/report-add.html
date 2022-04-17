@@ -32,8 +32,9 @@
     </div>
     <form name="reportDto" action="#" method="post">
       <div class="form-group">
-        <label for="txtTitle">Заголовок:</label>
+        <label for="txtTitle" class="label-style">Заголовок:</label>
         <input type="text" id="txtTitle" name="title" placeholder="Заголовок" class="input-text__custom">
+        <p class="input-text__error"></p>
       </div>
 
 <!--       <div class="form-group">
@@ -43,18 +44,20 @@
 
       <div class="form-group">
         <p class="label-style">Зображення:</p>
-        <input type="file" name="file" id="txtImages" class="input-file" multiple>
         <label for="txtImages" class="btn btn-tertiary label-file">
           <i class="icon fa fa-check"></i>
           <span class="file-name">Завантажити зображення</span>
         </label>
+        <input type="file" name="file" id="txtImages" class="input-file" multiple>
+        <p class="input-text__error"></p>
       </div>
 
       <div id="file-container"></div>
 
       <div class="form-group">
-        <label for="txtDescription">Опис:</label>
+        <label for="txtDescription" class="label-style">Опис:</label>
         <input type="text" id="txtDescription" name="description" placeholder="Опис" class="input-text__custom">
+        <p class="input-text__error"></p>
       </div>
 
       <div class="btn-group" role="group">
