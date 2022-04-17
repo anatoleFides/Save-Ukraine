@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Список звітів</title>
+
+  <link rel="shortcut icon" href="../image/favicon-heart.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="container">
+    <div class="container__row">
+      <h1 class="managmet__title">Список звітів</h1>
+      <div>
+        <img src="../image/logo.png" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Posting Date</th>
+        <th>Description</th>
+        <th>Images</th>
+        <th>Edit</th>
+        <th>Remove</th>
+      </tr>
+
+      <tr>
+        <td>
+          <form name="a" action="#" method="post">
+            <input type="hidden" id="aid" name="id" th:value="id">
+            <button type="submit" class="btn btn-danger _btn">Видалити</button>
+          </form>
+      </td>
+    </tr>
+  </table>
+  </div>
+
+</div>
+
+</body>
+
+</html>

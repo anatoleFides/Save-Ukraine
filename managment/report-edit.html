@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Редагування звіти</title>
+
+  <link rel="shortcut icon" href="../image/favicon-heart.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="container__row">
+      <h1 class="managmet__title">Форма редагування звітів</h1>
+      <div>
+        <img src="../image/logo.png" alt="БО «МБФ «ВРЯТУВАТИ УКРАЇНУ»">
+      </div>
+    </div>
+    <form name="reportEditDto" action="#" method="post">
+<!--  <form name="reportDto" th:action="@{/reports/edit}" method="post" enctype="multipart/form-data">-->
+
+      <input type="hidden" id="aid" name="id" value="id">
+
+      <div class="form-group">
+        <label for="txtTitle">Заголовок</label>
+        <input type="text" id="txtTitle" value="title" name="title" placeholder="Заголовок" class="input-text__custom">
+      </div>
+
+<!--    <div class="form-group">-->
+<!--      <label for="txtImages">Зображення</label>-->
+<!--      <input type="file" id="txtImages" accept="image/jpg images/png" name="images" multiple>-->
+<!--    </div>-->
+
+      <div class="form-group">
+        <label for="txtDescription">Опис</label>
+        <input type="text" id="txtDescription" value="description" name="description" placeholder="Опис" class="input-text__custom">
+      </div>
+
+      <div class="btn-group" role="group">
+        <div class="form-actions">
+          <button type="submit" class="_btn">Редагувати</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  // $('#fileupload').fileupload();
+</script>
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
