@@ -135,6 +135,10 @@
     padding: 0 0 120% 0;
   }
 }
+/*.statutory-documents__image:hover {
+  transform: scale(3.0);
+  z-index: 5;
+}*/
 @media (min-width: 880px) {
   .statutory-documents__image {
     flex: 0 1 33.33%;
@@ -161,7 +165,7 @@
 }
 .statutory-documents__bound {
   position: relative;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
 }
 .statutory-documents__num {
   position: absolute;
@@ -172,9 +176,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 15px;
-  right: 15px;
-  background: #0786A5;
+  bottom: 10px;
+  right: 10px;
+  background: #C4C4C4;
   color: #fff;
 }
 .statutory-documents__parag {
