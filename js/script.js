@@ -213,6 +213,21 @@ if (document.querySelector('.swiper-kharkiv')) {
   })
 }
 
+// following a link to inactive tab page
+// const linkRequisite = document.getElementById('requisites__link')
+
+// console.log(linkRequisite)
+
+// linkRequisite.onclick = (event) => {
+  
+  
+//   location.href = 'how-can-help/donation.html#donation-now'
+
+
+// console.log(document.getElementById('page2'))
+//   document.getElementById('page2').classList.add('tabs-active')
+// }
+
 //Page donation change Tab
 const navTabLinks = document.querySelectorAll('.nav-tabs__item')
 

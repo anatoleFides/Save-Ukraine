@@ -60,7 +60,6 @@
 .tabs-donation__pages {
   border: 1px solid #0786A5;
   box-sizing: border-box;
-  padding: 0 0 48px 0;
 }
 @media (max-width: 768px) {
   .tabs-donation__pages {
