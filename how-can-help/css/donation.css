@@ -83,7 +83,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0 0 4px;
+  margin: 0 4px;
 }
 
 .tabs-donation__title {
@@ -137,12 +137,6 @@
     padding: 0;
   }
 }
-/*@media (max-width: 768px) {
-  .card-donate__content h3 {
-    padding: 20px 0 23px 8px;
-  }
-}*/
-
 /*Button-----------------------------------*/
 .card-donate__row {
  display: inline-flex;
