@@ -18,21 +18,21 @@
 .slider-report {
   position: relative;
 }
-.swiper-slide {
+.slide-report__big, .slide-report__small {
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
 }
-.swiper-slide img {
+/*.swiper-slide img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+}*/
 .swiper-slide.slide-report__big {
   padding: 0 0 50% 0;
 }

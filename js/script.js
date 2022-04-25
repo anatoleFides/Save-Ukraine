@@ -106,11 +106,7 @@ if (document.querySelector('.slider-main-ukrain')){
     autoplay: true,
     pagination: {
       el: '.swiper-pagination'
-    },
-    navigation: {
-      nextEl: '.slider-main-ukrain .slider-arrows-next',
-      prevEl: '.slider-main-ukrain .slider-arrows-prev',
-    },
+    }
   })
 }
 
