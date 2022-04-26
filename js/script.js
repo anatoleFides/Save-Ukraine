@@ -48,12 +48,18 @@ const showImgWhenSelected = (id, collection) => {
 
 const listImgFlag = document.querySelectorAll('.icon-language')
 const optionsLanguage = document.querySelectorAll('.language-option')
+const formLanguage = document.getElementById('form-language')
 
 Object.assign(document.querySelector('.language-select'), {
   onchange: event => {
     for (let option of optionsLanguage) {
-      option.selected && showImgWhenSelected(option.dataset.option_flag, listImgFlag)
-    }
+      if (option.selected) {
+        showImgWhenSelected(option.dataset.option_flag, listImgFlag)
+
+        formLanguage.submit()
+      }
+    } 
+
   }
 }) //End Change img language
 
