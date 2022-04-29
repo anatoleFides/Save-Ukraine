@@ -2,23 +2,33 @@ const messages = [
   'Не може бути порожнім',
   'Невірний формат зображення',
   'Розміз зображення вище 1МВ',
-  ''
+  '',
+  'Оберіть зобразення'
 ]
 
 const showMessage = (elem, index) => Object.assign(elem.nextElementSibling, {
   textContent: messages[index]
 })
 
-const inputs = document.querySelectorAll('.input-text__custom')
-
-for (let input of inputs) {
-
-  input.oninput = (event) => {
-
-    !input.value ? showMessage(input, 0) : showMessage(input, 3)
-  }
-}
 const inputFile = document.getElementById('txtImages')
+
+const testFieldsInput = () => {
+  const inputs = document.querySelectorAll('.input-text__custom')
+
+  for (let input of inputs) {
+    if (!input.value) {
+      showMessage(input, 0)
+
+      return false
+    } else showMessage(input, 3)
+  }
+
+  if (inputFile.files.length === 0) {
+      showMessage(inputFile, 4)
+
+      return false
+    } else showMessage(inputFile, 3)
+}
 
 inputFile.onchange = (event) => {
 
